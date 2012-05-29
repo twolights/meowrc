@@ -11,7 +11,7 @@ MEOWRC_VIM=$MEOWRC_HOME/vim
 RC_ITEMS=".zshrc .vimrc .screenrc"
 
 mkdir -p $VIM_BUNDLE
-if [ ! -d $VIM_BUNDLE ]; then
+if [ ! -d $VUNDLE_HOME ]; then
     echo 'Installing vundle...'
     git clone https://github.com/gmarik/vundle.git $VUNDLE_HOME
 fi
