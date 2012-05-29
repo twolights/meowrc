@@ -26,7 +26,7 @@ snippet forin
 	}
 # @property (Objective-C 2.0)
 snippet prop
-	@property (nonatomic, ${1:retain}) ${2:IBOutlet }${3:NSSomeClass}${4:* $3};${5}
+	@property (nonatomic, ${1:retain}) ${2:IBOutlet }${3:NSSomeClass}${4:* someObject};${5}
 # @synthesize (Objective-C 2.0)
 snippet syn
 	@synthesize ${1:property};${2}
@@ -69,3 +69,6 @@ snippet cellFor
 		$3.textLabel.text = ${6:@"Text"};
 		return $3;
 	}
+snippet rel
+	[${1:obj} release];
+	$1 = nil;
