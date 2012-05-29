@@ -18,7 +18,7 @@ fi
 
 if [ ! -d $MEOWRC_HOME ]; then
     echo 'Installing meowrc...'
-    # git clone "somewhere" $MEOWRC_HOME
+    git clone https://github.com/twolights/meowrc $MEOWRC_HOME
 else
     echo -n 'Updating meowrc...'
     pushd $MEOWRC_HOME
