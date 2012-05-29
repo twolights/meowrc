@@ -1,0 +1,13 @@
+bell_msg "Incoming subspace transmission from channel %n"
+caption always "%{dk}%{+b K}> %{W}%n %t %{K}<%{W}%=%{+b K}load{%l} %{C}$USER@%{W}%H %{db}%{W}  %0C %A  "
+
+defwrap on
+vbell off
+defutf8 on
+encoding utf8 utf8
+
+# h/left, l/right
+bind h prev
+bind l next
+
+term screen-256color

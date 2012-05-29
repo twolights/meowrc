@@ -1,0 +1,71 @@
+# @selector(...)
+snippet sel
+	@selector(${1:method}:)${3}
+snippet init
+	-(id) init$1 {
+		if((self = [super init${1:With}]) == nil) {
+			return nil;
+		}
+		${2:/* code */}
+		return self;
+	}
+# NSArray, NSMutableArray
+snippet array
+	NS${1:Mutable}Array* ${2:array} = [[NS$1Array alloc] init${3}];${4}
+snippet aarray
+	NS${1:Mutable}Array* ${2:array} = [NS$1Array array${3}];${4}
+# NSDictionary
+snippet dict
+	NS${1:Mutable}Dictionary* ${2:dict} = [[NS$1Dictionary alloc] init${3}];${4}
+snippet adict
+	NS${1:Mutable}Dictionary* ${2:dict} = [NS$1Dictionary dictionary${3}];${4}
+# for (object in array)
+snippet forin
+	for(${1:Class}* ${2:some$1} in ${3:array}) {
+		${4}
+	}
+# @property (Objective-C 2.0)
+snippet prop
+	@property (nonatomic, ${1:retain}) ${2:IBOutlet }${3:NSSomeClass}${4:* $3};${5}
+# @synthesize (Objective-C 2.0)
+snippet syn
+	@synthesize ${1:property};${2}
+# [[ alloc] init]
+snippet alloc
+	[[${1:foo} alloc] init${2}];${3}
+# autorelease pool
+snippet NSAutoreleasePool
+	NSAutoreleasePool* ${1:pool} = [[NSAutoreleasePool alloc] init];
+	${2:/* code */}
+	[$1 release];
+# Throw an exception
+snippet except
+	NSException *${1:badness};
+	$1 = [NSException exceptionWithName:@"${2:$1Name}"
+	                             reason:@"${3}"
+	                           userInfo:nil];
+	[$1 raise];
+# pragma
+snippet prag
+	#pragma mark - ${1:foo}
+
+# iOS
+# UIAlertView
+snippet UIAlertView
+	UIAlertView* ${1:alertView} = [[UIAlertView alloc] initWithTitle:${2:@"title"} message:${3:@"message"} delegate:${4:self} cancelButtonTitle:${5:@"cancel"} otherButtonTitles:${6}nil];
+	[$1 show];
+	[$1 autorelease];{7}
+snippet UIActionSheet
+	UIActionSheet* ${1:actionSheet} = [[UIActionSheet alloc] initWithTitle:${2:@"title"} delegate:${3:self} cancelButtonTitle:${4:nil} destructiveButtonTitle:${5:nil} otherButtonTitles:${6:nil}];
+	[$1 addButtonWithTitle:${7:@"title"}];
+	[$1 showInView:${8:self.view}];
+	[$1 autorelease];
+snippet cellFor
+	-(UITableViewCell*) tableView:(UITableView*)${1:tableView} cellForRowAtIndexPath:(NSIndexPath*)${2:indexPath} {
+		UITableViewCell* ${3:cell} = [$1 dequeueReusableCellWithIdentifier:${4:@"identifier"}];
+		if($3 == nil) {
+			$3 = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyle${5:Default} reuseIdentifier:$4];
+		}
+		$3.textLabel.text = ${6:@"Text"};
+		return $3;
+	}
