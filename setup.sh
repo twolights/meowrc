@@ -2,6 +2,7 @@
 
 HOME_BIN=~/bin
 HOME_VIM=~/.vim
+OH_MY_ZSH=~/.oh-my-zsh
 VIM_BUNDLE=$HOME_VIM/bundle
 VUNDLE_HOME=$VIM_BUNDLE/vundle
 MEOWRC_HOME=~/.meowrc
@@ -14,6 +15,11 @@ mkdir -p $VIM_BUNDLE
 if [ ! -d $VUNDLE_HOME ]; then
     echo 'Installing vundle...'
     git clone https://github.com/gmarik/vundle.git $VUNDLE_HOME
+fi
+
+if [ ! -d $OH_MY_ZSH ]; then
+    echo 'Installing oh-my-zsh...'
+    git clone git://github.com/robbyrussell/oh-my-zsh.git $OH_MY_ZSH
 fi
 
 if [ ! -d $MEOWRC_HOME ]; then
