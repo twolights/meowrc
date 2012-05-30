@@ -48,6 +48,12 @@ snippet except
 # pragma
 snippet prag
 	#pragma mark - ${1:foo}
+# dealloc
+snippet deall
+	-(void) dealloc {
+		${1}
+		[super dealloc];
+	}
 
 # iOS
 # UIAlertView
