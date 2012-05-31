@@ -30,9 +30,17 @@ plugins=(git osx pip git-flow brew django vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-source ~/.aliases
+if [ -f ~/.aliases ]; then
+    source ~/.aliases
+fi
 
-alias ls='ls -aGF'
+current_os=`uname -s`
+if [ $current_os = 'Linux' ]; then
+    alias ls='ls -aF --color' 
+else
+    alias ls='ls -aGF'
+fi  
+
 alias g=egrep
 alias py=python
 alias ipy=ipython
