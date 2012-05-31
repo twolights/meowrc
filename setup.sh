@@ -40,6 +40,7 @@ for rc in $RC_ITEMS; do
 done
 echo 'done!'
 
+mkdir -p $HOME_BIN/
 echo -n "Linking scripts... "
 for script in $MEOWRC_BIN/*; do
     ln -fs $script $HOME_BIN/
