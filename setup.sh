@@ -9,7 +9,7 @@ MEOWRC_HOME=~/.meowrc
 MEOWRC_BIN=$MEOWRC_HOME/bin
 MEOWRC_VIM=$MEOWRC_HOME/vim
 
-RC_ITEMS=".zshrc .vimrc .screenrc"
+RC_ITEMS=".zshrc .vimrc .screenrc .gitconfig .gitignore_global"
 
 mkdir -p $VIM_BUNDLE
 if [ ! -d $VUNDLE_HOME ]; then
@@ -21,6 +21,8 @@ if [ ! -d $OH_MY_ZSH ]; then
     echo 'Installing oh-my-zsh...'
     git clone git://github.com/robbyrussell/oh-my-zsh.git $OH_MY_ZSH
 fi
+
+ln -fs $MEOWRC_HOME/ykchen.zsh-theme $OH_MY_ZSH/themes/
 
 if [ ! -d $MEOWRC_HOME ]; then
     echo 'Installing meowrc...'
