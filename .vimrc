@@ -86,7 +86,7 @@ Bundle 'snipMate'
 Bundle 'a.vim'
 Bundle 'VisIncr'
 Bundle 'cocoa.vim'
-Bundle 'PIV'
+" Bundle 'PIV'
 
 " Added Objective C support to a.vim
 let g:alternateExtensions_h = 'c,cpp,cxx,cc,CC,m'
@@ -94,6 +94,12 @@ let g:alternateExtensions_m = 'h'
 
 " Remaps EasyMotion trigger
 let g:EasyMotion_leader_key = 'f'
+
+" Remaps default ctrlp.vim action to horizontal split
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-x>', '<2-LeftMouse>'],
+    \ 'AcceptSelection("h")': ['<cr>', '<c-s>', '<c-cr>'],
+    \ }
 
 " Tabularize
 nmap <Leader>a= :Tabularize /=<CR>
