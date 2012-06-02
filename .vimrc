@@ -47,8 +47,9 @@ nmap gm :call cursor(0, virtcol('$')/2)<CR>
 vmap Y :w !pbcopy<CR><CR>
 nmap YY VY
 
-" Make *.m having syntax=objc by default
+" Overrides commonly-used syntax/filetype
 autocmd BufNewFile,BufRead *.m set syntax=objc
+autocmd BufNewFile,BufRead SCons* set filetype=scons 
 
 " Replace the default fold text
 set foldtext=MyFoldText()
