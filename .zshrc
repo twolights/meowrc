@@ -53,7 +53,7 @@ alias psr="psu root"
 alias psu="ps -w -U"
 alias py=python
 alias rm='rm -i'
-alias sc='scons'
+alias sc='scons -Q'
 alias scp='scp -oProtocol=2'
 alias ssh='ssh -C -2'
 alias t='telnet'
