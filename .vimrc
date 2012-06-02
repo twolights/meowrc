@@ -81,12 +81,14 @@ Bundle 'tpope/vim-surround'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'godlygeek/tabular'
+Bundle 'mileszs/ack.vim'
 
 Bundle 'snipMate'
 Bundle 'a.vim'
 Bundle 'VisIncr'
 Bundle 'cocoa.vim'
 Bundle 'nginx.vim'
+Bundle 'scons.vim'
 " Bundle 'PIV'
 
 " Added Objective C support to a.vim
