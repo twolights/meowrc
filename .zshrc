@@ -42,20 +42,21 @@ else
 fi  
 
 alias g=egrep
-alias py=python
+alias h='history'
 alias ipy=ipython
+alias j='jobs -l'
 alias mv='mv -i'
 alias n=nslookup
 alias p="ps -axwww"
-alias psu="ps -w -U"
-alias psr="psu root"
 alias psm="psu $USER"
+alias psr="psu root"
+alias psu="ps -w -U"
+alias py=python
 alias rm='rm -i'
+alias sc='scons'
 alias scp='scp -oProtocol=2'
 alias ssh='ssh -C -2'
 alias t='telnet'
-alias j='jobs -l'
-alias h='history'
 
 unalias history
 
