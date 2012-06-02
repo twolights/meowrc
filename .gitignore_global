@@ -2,3 +2,6 @@
 .DS_Store
 .*.sw[nop]
 *.py[oc]
+*.o
+.sconsign.dblite
+a.out
