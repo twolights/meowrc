@@ -86,6 +86,7 @@ Bundle 'snipMate'
 Bundle 'a.vim'
 Bundle 'VisIncr'
 Bundle 'cocoa.vim'
+Bundle 'nginx.vim'
 " Bundle 'PIV'
 
 " Added Objective C support to a.vim
