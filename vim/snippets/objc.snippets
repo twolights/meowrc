@@ -54,7 +54,14 @@ snippet deall
 		${1}
 		[super dealloc];
 	}
-
+# Singleton
+snippet singleton
+	+(${1:SingletonClass}*) sharedInstance {
+		static dispatch_once_t once;
+		static $1* ${2:theSingleton};
+		dispatch_once(&once, ^{ $2 = [[$1 alloc] init${3}]; });
+		return $2;
+	}
 # NSNotificationCenter
 snippet addObs
 	[[NSNotificationCenter defaultCenter] addObserver:${1:self} selector:@selector(${2:notificationHandler:}) name:${3:NOTIFICATION_NAME} object:${4:nil}];
