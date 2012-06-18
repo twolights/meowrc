@@ -34,6 +34,10 @@ if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
 
+if [ -f ~/.local_zshrc ]; then
+    source ~/.local_zshrc
+fi
+
 current_os=`uname -s`
 if [ $current_os = 'Linux' ]; then
     alias ls='ls -aF --color' 
