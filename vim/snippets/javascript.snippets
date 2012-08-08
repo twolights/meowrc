@@ -72,3 +72,7 @@ snippet get
 # Get Element
 snippet gett
 	getElementBy${1:Id}('${2}')${3}
+snippet bind
+	$(${1:'#element'}).bind('${2:click}', function(${3:e}) {
+			${4}
+		});
