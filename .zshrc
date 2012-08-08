@@ -61,6 +61,7 @@ alias sc='scons -Q'
 alias scp='scp -oProtocol=2'
 alias ssh='ssh -C -2'
 alias t='telnet'
+alias termcolor='env TERM=xterm-color'
 
 unalias history
 
