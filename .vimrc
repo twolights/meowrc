@@ -50,6 +50,7 @@ nmap YY VY
 " Overrides commonly-used syntax/filetype
 autocmd BufNewFile,BufRead *.m set syntax=objc
 autocmd BufNewFile,BufRead SCons* set filetype=scons 
+autocmd BufNewFile,BufRead *.json set syntax=json
 
 " Replace the default fold text
 set foldtext=MyFoldText()
@@ -90,6 +91,7 @@ Bundle 'VisIncr'
 Bundle 'cocoa.vim'
 Bundle 'nginx.vim'
 Bundle 'scons.vim'
+Bundle 'JSON.vim'
 " Bundle 'PIV'
 
 " Added Objective C support to a.vim

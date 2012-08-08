@@ -41,6 +41,9 @@ fi
 current_os=`uname -s`
 if [ $current_os = 'Linux' ]; then
     alias ls='ls -aF --color' 
+elif [ $current_os = 'Darwin' ]; then
+    alias ls='ls -aGF'
+    alias xcb=xcodebuild
 else
     alias ls='ls -aGF'
 fi  
