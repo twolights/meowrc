@@ -92,14 +92,19 @@ Bundle 'cocoa.vim'
 Bundle 'nginx.vim'
 Bundle 'scons.vim'
 Bundle 'JSON.vim'
+Bundle 'Rip-Rip/clang_complete'
 " Bundle 'PIV'
 
-" Added Objective C support to a.vim
+" Adds Objective C support to a.vim
 let g:alternateExtensions_h = 'c,cpp,cxx,cc,CC,m'
 let g:alternateExtensions_m = 'h'
 
 " Remaps EasyMotion trigger
 let g:EasyMotion_leader_key = 'f'
+
+" Adds default path to clang-complete
+" let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
+let g:clang_library_path = '/usr/lib'
 
 " Remaps default ctrlp.vim action to horizontal split
 let g:ctrlp_prompt_mappings = {
