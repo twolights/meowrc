@@ -67,6 +67,9 @@ snippet addObs
 	[[NSNotificationCenter defaultCenter] addObserver:${1:self} selector:@selector(${2:notificationHandler:}) name:${3:NOTIFICATION_NAME} object:${4:nil}];
 snippet postNo
 	[[NSNotificationCenter defaultCenter] postNotificationName:${1:NOTIFICATION_NAME} object:${2:self} userInfo:${3:userInfo}];
+# IBAction
+snippet IBA
+	-(IBAction) ${1:someButton_onTap}:(id)sender;
 # iOS
 # UIAlertView
 snippet UIAlertView
