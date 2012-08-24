@@ -51,6 +51,7 @@ nmap YY VY
 autocmd BufNewFile,BufRead *.m set syntax=objc
 autocmd BufNewFile,BufRead SCons* set filetype=scons 
 autocmd BufNewFile,BufRead *.json set syntax=json
+autocmd BufNewFile,BufRead *.scss set filetype=scss
 
 " Replace the default fold text
 set foldtext=MyFoldText()
@@ -84,6 +85,7 @@ Bundle 'tsaleh/vim-matchit'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'godlygeek/tabular'
 Bundle 'mileszs/ack.vim'
+Bundle 'cakebaker/scss-syntax.vim'
 
 Bundle 'snipMate'
 Bundle 'a.vim'
@@ -93,6 +95,7 @@ Bundle 'nginx.vim'
 Bundle 'scons.vim'
 Bundle 'JSON.vim'
 Bundle 'Rip-Rip/clang_complete'
+" Bundle 'remote-PHP-debugger'
 " Bundle 'PIV'
 
 " Adds Objective C support to a.vim
