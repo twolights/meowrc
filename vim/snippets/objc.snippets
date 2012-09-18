@@ -26,7 +26,7 @@ snippet forin
 	}
 # @property (Objective-C 2.0)
 snippet prop
-	@property (nonatomic, ${1:retain}) ${2:IBOutlet }${3:NSSomeClass}${4:* someObject};${5}
+	@property (nonatomic, ${1:retain}) ${2:IBOutlet }${3:NSSomeClass*} ${4:someObject};${5}
 # @synthesize (Objective-C 2.0)
 snippet syn
 	@synthesize ${1:property};${2}
@@ -53,7 +53,7 @@ snippet deall
 	-(void) dealloc {
 		${1}
 		[super dealloc];
-	}
+	}${2}
 # Singleton
 snippet singleton
 	+(${1:SingletonClass}*) sharedInstance {
@@ -61,26 +61,26 @@ snippet singleton
 		static $1* ${2:theSingleton};
 		dispatch_once(&once, ^{ $2 = [[$1 alloc] init${3}]; });
 		return $2;
-	}
+	}${4}
 # NSNotificationCenter
 snippet addObs
-	[NSNotificationCenter.defaultCenter addObserver:${1:self} selector:@selector(${2:notificationHandler:}) name:${3:NOTIFICATION_NAME} object:${4:nil}];
+	[NSNotificationCenter.defaultCenter addObserver:${1:self} selector:@selector(${2:notificationHandler:}) name:${3:NOTIFICATION_NAME} object:${4:nil}];${5}
 snippet postNo
-	[NSNotificationCenter.defaultCenter postNotificationName:${1:NOTIFICATION_NAME} object:${2:self} userInfo:${3:userInfo}];
+	[NSNotificationCenter.defaultCenter postNotificationName:${1:NOTIFICATION_NAME} object:${2:self} userInfo:${3:userInfo}];${4}
 # IBAction
 snippet IBA
-	-(IBAction) ${1:someButton_onTap}:(id)sender;
+	-(IBAction) ${1:someButton_onTap}:(id)sender;${2}
 # iOS
 # UIAlertView
 snippet UIAlertView
 	UIAlertView* ${1:alertView} = [[UIAlertView alloc] initWithTitle:${2:@"title"} message:${3:@"message"} delegate:${4:self} cancelButtonTitle:${5:@"cancel"} otherButtonTitles:${6}nil];
 	[$1 show];
-	[$1 autorelease];{7}
+	[$1 autorelease];${7}
 snippet UIActionSheet
 	UIActionSheet* ${1:actionSheet} = [[UIActionSheet alloc] initWithTitle:${2:@"title"} delegate:${3:self} cancelButtonTitle:${4:nil} destructiveButtonTitle:${5:nil} otherButtonTitles:${6:nil}];
 	[$1 addButtonWithTitle:${7:@"title"}];
 	[$1 showInView:${8:self.view}];
-	[$1 autorelease];
+	[$1 autorelease];${9}
 snippet cellFor
 	-(UITableViewCell*) tableView:(UITableView*)${1:tableView} cellForRowAtIndexPath:(NSIndexPath*)${2:indexPath} {
 		UITableViewCell* ${3:cell} = [$1 dequeueReusableCellWithIdentifier:${4:@"identifier"}];
@@ -89,9 +89,9 @@ snippet cellFor
 		}
 		$3.textLabel.text = ${6:@"Text"};
 		return $3;
-	}
+	}${6}
 snippet rel
 	[${1:obj} release];
-	$1 = nil;
+	$1 = nil;${2}
 snippet conststr
-	${1:static }NSString* const ${2:kStringName} = @"${3:some_string_content}";
+	${1:static }NSString* const ${2:kStringName} = @"${3:some_string_content}";${4}
