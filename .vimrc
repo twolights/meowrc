@@ -9,7 +9,7 @@ set cindent
 set enc=utf-8
 set expandtab
 set fileencoding=utf-8
-set foldmethod=marker
+set foldmethod=syntax
 set ts=4
 set hlsearch
 set incsearch
