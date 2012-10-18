@@ -75,6 +75,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH:~:~/bin:.
 
 setopt extendedhistory
 export HISTTIMEFORMAT="%y-%d-%m_%H:%M:%S "
+export KEYTIMEOUT=1
 
 stty erase '' >& /dev/null
 
