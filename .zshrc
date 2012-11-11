@@ -65,6 +65,7 @@ alias scp='scp -oProtocol=2'
 alias ssh='ssh -C -2'
 alias t='telnet'
 alias termcolor='env TERM=xterm-color'
+alias tempboard='echo -n -e "\033]0;Pasteboard\007"'
 
 unalias history
 
@@ -80,3 +81,5 @@ export KEYTIMEOUT=1
 stty erase '' >& /dev/null
 
 [[ -s "/Users/ykchen/.rvm/scripts/rvm" ]] && source "/Users/ykchen/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
