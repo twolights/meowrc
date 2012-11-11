@@ -238,3 +238,9 @@ snippet curlinit
 	curl_setopt($$1, CURLOPT_RETURNTRANSFER, true);
 	$${3:result} = curl_exec($$1});
 	curl_close($${1:c});
+
+snippet fetchrow
+	while(is_array($${1:row} = $${2:result}->fetchRow())) {
+		${3:/* code */}
+	}
+	$4
