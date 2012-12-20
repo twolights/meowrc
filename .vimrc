@@ -52,6 +52,7 @@ autocmd BufNewFile,BufRead *.m set syntax=objc
 autocmd BufNewFile,BufRead SCons* set filetype=scons 
 autocmd BufNewFile,BufRead *.json set syntax=json
 autocmd BufNewFile,BufRead *.scss set filetype=scss
+autocmd BufNewFile,BufRead *.c set noexpandtab
 
 " Replace the default fold text
 set foldtext=MyFoldText()
