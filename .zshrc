@@ -48,6 +48,7 @@ else
     alias ls='ls -aGF'
 fi  
 
+alias bpy=bpython
 alias g=egrep
 alias h='history'
 alias ipy=ipython
