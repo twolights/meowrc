@@ -73,7 +73,7 @@ unalias history
 export EDITOR=vim
 export VISUAL=vim
 
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH:~:~/bin:.
+export PATH=/usr/local/bin:/usr/local/sbin:/sbin:$PATH:~:~/bin:.
 
 setopt extendedhistory
 export HISTTIMEFORMAT="%y-%d-%m_%H:%M:%S "
