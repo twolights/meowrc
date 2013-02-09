@@ -53,6 +53,7 @@ autocmd BufNewFile,BufRead SCons* set filetype=scons
 autocmd BufNewFile,BufRead *.json set syntax=json
 autocmd BufNewFile,BufRead *.scss set filetype=scss
 autocmd BufNewFile,BufRead *.c set noexpandtab
+autocmd BufNewFile,BufRead *.py set foldmethod=indent
 
 " Replace the default fold text
 set foldtext=MyFoldText()
