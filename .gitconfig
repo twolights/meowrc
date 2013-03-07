@@ -12,5 +12,6 @@ diff        =
 	excludesfile = ~/.gitignore_global
 
 [alias]
-	co = checkout
-    stat = status
+	co      = checkout
+    stat    = status
+    br      = branch
