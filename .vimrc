@@ -98,8 +98,12 @@ Bundle 'scons.vim'
 Bundle 'JSON.vim'
 Bundle 'python.vim'
 Bundle 'Rip-Rip/clang_complete'
+Bundle 'airblade/vim-gitgutter'
 " Bundle 'remote-PHP-debugger'
 " Bundle 'PIV'
+
+" Clears SignColumn for vim-gitgutter
+highlight clear SignColumn
 
 " Adds Objective C support to a.vim
 let g:alternateExtensions_h = 'c,cpp,cxx,cc,CC,m'
