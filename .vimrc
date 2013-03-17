@@ -54,6 +54,7 @@ autocmd BufNewFile,BufRead *.json set syntax=json
 autocmd BufNewFile,BufRead *.scss set filetype=scss
 autocmd BufNewFile,BufRead *.c set noexpandtab
 autocmd BufNewFile,BufRead *.py set foldmethod=indent
+autocmd BufNewFile,BufRead *.go set filetype=go
 
 " Replace the default fold text
 set foldtext=MyFoldText()
@@ -99,6 +100,7 @@ Bundle 'JSON.vim'
 Bundle 'python.vim'
 Bundle 'Rip-Rip/clang_complete'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'fsouza/go.vim'
 " Bundle 'remote-PHP-debugger'
 " Bundle 'PIV'
 
