@@ -234,9 +234,9 @@ snippet fbinit
 # CURL
 snippet curlinit
 	$$1 = curl_init();
-	curl_setopt($$1, CURLOPT_URL, ${2:http://www.ipeen.com.tw/});
+	curl_setopt($$1, CURLOPT_URL, ${2:"http://www.ipeen.com.tw/"});
 	curl_setopt($$1, CURLOPT_RETURNTRANSFER, true);
-	$${3:result} = curl_exec($$1});
+	$${3:result} = curl_exec($$1);
 	curl_close($${1:c});
 
 snippet fetchrow
