@@ -2,7 +2,7 @@
 snippet sel
 	@selector(${1:method}:)${3}
 snippet init
-	-(id) init$1 {
+	- (id)init$1 {
 		if((self = [super init${1:With}]) == nil) {
 			return nil;
 		}
@@ -50,7 +50,7 @@ snippet prag
 	#pragma mark - ${1:foo}
 # dealloc
 snippet deall
-	-(void) dealloc {
+	- (void)dealloc {
 		${1}
 		[super dealloc];
 	}${2}
@@ -69,7 +69,7 @@ snippet postNo
 	[NSNotificationCenter.defaultCenter postNotificationName:${1:NOTIFICATION_NAME} object:${2:self} userInfo:${3:userInfo}];${4}
 # IBAction
 snippet IBA
-	-(IBAction) ${1:someButton_onTap}:(id)sender;${2}
+	- (IBAction)${1:someButton_onTap}:(id)sender;${2}
 # iOS
 # UIAlertView
 snippet UIAlertView
@@ -82,7 +82,7 @@ snippet UIActionSheet
 	[$1 showInView:${8:self.view}];
 	[$1 autorelease];${9}
 snippet cellFor
-	-(UITableViewCell*) tableView:(UITableView*)${1:tableView} cellForRowAtIndexPath:(NSIndexPath*)${2:indexPath} {
+	- (UITableViewCell*)tableView:(UITableView*)${1:tableView} cellForRowAtIndexPath:(NSIndexPath*)${2:indexPath} {
 		UITableViewCell* ${3:cell} = [$1 dequeueReusableCellWithIdentifier:${4:@"identifier"}];
 		if($3 == nil) {
 			$3 = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyle${5:Default} reuseIdentifier:$4];
@@ -95,3 +95,5 @@ snippet rel
 	$1 = nil;${2}
 snippet conststr
 	${1:static }NSString* const ${2:kStringName} = @"${3:some_string_content}";${4}
+snippet warn
+	#warning ${1:Implementation required}:${2}
