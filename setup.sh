@@ -19,7 +19,7 @@ fi
 
 if [ ! -d $OH_MY_ZSH ]; then
     echo 'Installing oh-my-zsh...'
-    git clone git://github.com/robbyrussell/oh-my-zsh.git $OH_MY_ZSH
+    git clone https://github.com/robbyrussell/oh-my-zsh.git $OH_MY_ZSH
 fi
 
 ln -fs $MEOWRC_HOME/ykchen.zsh-theme $OH_MY_ZSH/themes/
