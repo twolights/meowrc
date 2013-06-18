@@ -5,11 +5,11 @@ external    = vimdiff-git.sh
 diff        =
 
 [user]
-	email = twolights@gmail.com
+	email = twolights.chen@ipeen.com.tw
 	name = Yi-Kuang Chen
 [core]
 	quotepath = false
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/ykchen/.gitignore_global
 
 [alias]
 	co      = checkout
