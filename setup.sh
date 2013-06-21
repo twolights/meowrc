@@ -3,6 +3,7 @@
 HOME_BIN=~/bin
 HOME_VIM=~/.vim
 OH_MY_ZSH=~/.oh-my-zsh
+OH_MY_ZSH_PLUGIN=$OH_MY_ZSH/custom/plugins
 VIM_BUNDLE=$HOME_VIM/bundle
 VUNDLE_HOME=$VIM_BUNDLE/vundle
 MEOWRC_HOME=~/.meowrc
@@ -23,6 +24,9 @@ if [ ! -d $OH_MY_ZSH ]; then
 fi
 
 ln -fs $MEOWRC_HOME/ykchen.zsh-theme $OH_MY_ZSH/themes/
+mkdir -p $OH_MY_ZSH_PLUGIN
+cd $OH_MY_ZSH_PLUGIN
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 
 if [ ! -d $MEOWRC_HOME ]; then
     echo 'Installing meowrc...'
