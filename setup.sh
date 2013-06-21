@@ -53,4 +53,4 @@ for d in $MEOWRC_VIM/*; do
 done
 echo 'done!'
 
-vim +BundleInstall +qa
+vim +'BundleInstall!' +qa
