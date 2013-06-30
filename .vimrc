@@ -47,6 +47,27 @@ nmap gm :call cursor(0, virtcol('$')/2)<CR>
 vmap Y :w !pbcopy<CR><CR>
 nmap YY VY
 
+" Tab-related keybindings
+nmap <C-E>n     :tabnew<CR>
+nmap <C-E><C-N> :tabnew<CR>
+nmap <C-E>l     :tabn<CR>
+nmap <C-E>j     :tabn<CR>
+nmap <C-E><C-E> :tabn<CR>
+nmap <C-E>.     :tabedit .<CR>
+nmap <C-E>h     :tabN<CR>
+nmap <C-E>k     :tabN<CR>
+nmap <C-E>q     :tabclose<CR>
+nmap <C-E>1     :tabn 1<CR>
+nmap <C-E>2     :tabn 2<CR>
+nmap <C-E>3     :tabn 3<CR>
+nmap <C-E>4     :tabn 4<CR>
+nmap <C-E>5     :tabn 5<CR>
+nmap <C-E>6     :tabn 6<CR>
+nmap <C-E>7     :tabn 7<CR>
+nmap <C-E>8     :tabn 8<CR>
+nmap <C-E>9     :tabn 9<CR>
+nmap <C-E>0     :tablast<CR>
+
 " Overrides commonly-used syntax/filetype
 autocmd BufNewFile,BufRead *.m set syntax=objc
 autocmd BufNewFile,BufRead SCons* set filetype=scons 
