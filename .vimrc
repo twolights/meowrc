@@ -48,6 +48,7 @@ vmap Y :w !pbcopy<CR><CR>
 nmap YY VY
 
 " Tab-related keybindings
+nmap <C-E>      <Nop>
 nmap <C-E>n     :tabnew<CR>
 nmap <C-E><C-N> :tabnew<CR>
 nmap <C-E>l     :tabn<CR>
