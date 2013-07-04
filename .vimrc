@@ -115,6 +115,7 @@ Bundle 'rodjek/vim-puppet'
 Bundle 'Rip-Rip/clang_complete'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'fsouza/go.vim'
+Bundle 'tpope/vim-fugitive'
 
 Bundle 'snipMate'
 Bundle 'a.vim'
