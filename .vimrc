@@ -52,7 +52,9 @@ nmap <C-E>      <Nop>
 nmap <C-E>n     :tabnew<CR>
 nmap <C-E><C-N> :tabnew<CR>
 nmap <C-E>l     :tabn<CR>
+nmap <C-E>]     :tabn<CR>
 nmap <C-E>j     :tabn<CR>
+nmap <C-E>[     :tabn<CR>
 nmap <C-E><C-E> :tabn<CR>
 nmap <C-E>.     :tabedit .<CR>
 nmap <C-E>h     :tabN<CR>
