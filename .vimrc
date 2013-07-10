@@ -1,5 +1,3 @@
-" vim: foldmethod=none
-
 " Basic settings
 filetype off
 filetype plugin on
@@ -70,18 +68,19 @@ nmap <C-E>9     :tabn 9<CR>
 nmap <C-E>0     :tablast<CR>
 
 " Overrides commonly-used syntax/filetype
-autocmd BufNewFile,BufRead *.m set syntax=objc
-autocmd BufNewFile,BufRead SCons* set filetype=scons 
-autocmd BufNewFile,BufRead *.json set syntax=json
-autocmd BufNewFile,BufRead *.scss set filetype=scss
-autocmd BufNewFile,BufRead *.c set noexpandtab
-autocmd BufNewFile,BufRead *.py set foldmethod=indent
-autocmd BufNewFile,BufRead *.go set filetype=go
+autocmd BufNewFile,BufRead *.m      set syntax=objc
+autocmd BufNewFile,BufRead SCons*   set filetype=scons 
+autocmd BufNewFile,BufRead *.json   set syntax=json
+autocmd BufNewFile,BufRead *.scss   set filetype=scss
+autocmd BufNewFile,BufRead *.c      set noexpandtab
+autocmd BufNewFile,BufRead *.py     set foldmethod=indent
+autocmd BufNewFile,BufRead *.go     set filetype=go
+autocmd BufNewFile,BufRead .vimrc   set foldmethod=indent
 
 " Replace the default fold text
 set foldtext=MyFoldText()
 
-function MyFoldText()
+function! MyFoldText()
     let sub = getline(v:foldstart)
     let sub = substitute(sub, '/\*\|\*/\|//\|{{{\d\= ', '', 'g')
     let sub = substitute(sub, '^    \( *\)', '\1[+] ', 'g')
@@ -96,7 +95,7 @@ function! SnippetsUpdate(snip_dir)
     call GetSnippets(a:snip_dir, '_')
     call GetSnippets(a:snip_dir, &ft)
 endfunction
-command ReloadSnippets :call SnippetsUpdate(snippets_dir)
+command! ReloadSnippets :call SnippetsUpdate(snippets_dir)
 
 " Vundle
 set rtp+=~/.vim/bundle/vundle/
