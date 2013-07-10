@@ -87,6 +87,40 @@ function! MyFoldText()
     return sub . ' '
 endfunction
 
+" Override original :wqa :wqa! :qa :qa!
+function! CloseAllIfNoTabsAreOpen(should_write, force)
+    let tab_count = tabpagenr("$")
+    if tab_count > 1
+        if a:should_write
+            let force_command = ":wqa!!"
+        else
+            let force_command = ":qa!!"
+        endif
+        echoerr "There are " . tab_count . " tabs open. Please type " . force_command . " if you really wanna close all tabs and quit vim."
+        return
+    endif
+    if a:should_write
+        if a:force
+            wqall!
+        else
+            wqall
+        endif
+    else
+        if a:force
+            qall!
+        else
+            qall
+        endif
+    endif
+endfunction
+
+cabbrev wqa<endofline>      call CloseAllIfNoTabsAreOpen(1, 0)
+cabbrev wqa!<endofline>     call CloseAllIfNoTabsAreOpen(1, 1)
+cabbrev wqa!!<endofline>    wqall!
+cabbrev qa<endofline>       call CloseAllIfNoTabsAreOpen(0, 0)
+cabbrev qa!<endofline>      call CloseAllIfNoTabsAreOpen(1, 1)
+cabbrev qa!!<endofline>     qall!
+
 " Snipmate reload
 let snippets_dir='~/.vim/snippets'
 
