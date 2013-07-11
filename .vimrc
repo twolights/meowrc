@@ -70,14 +70,15 @@ nmap <C-E>9     :tabn 9<CR>
 nmap <C-E>0     :tablast<CR>
 
 " Overrides commonly-used syntax/filetype
-autocmd BufNewFile,BufRead *.m      set syntax=objc
-autocmd BufNewFile,BufRead SCons*   set filetype=scons 
-autocmd BufNewFile,BufRead *.json   set syntax=json
-autocmd BufNewFile,BufRead *.scss   set filetype=scss
-autocmd BufNewFile,BufRead *.c      set noexpandtab
-autocmd BufNewFile,BufRead *.py     set foldmethod=indent
-autocmd BufNewFile,BufRead *.go     set filetype=go
-autocmd BufNewFile,BufRead .vimrc   set foldmethod=indent
+autocmd BufNewFile,BufRead  *.m     set syntax=objc
+autocmd BufNewFile,BufRead  SCons*  set filetype=scons 
+autocmd BufNewFile,BufRead  *.json  set syntax=json
+autocmd BufNewFile,BufRead  *.scss  set filetype=scss
+autocmd BufNewFile,BufRead  *.c     set noexpandtab
+autocmd BufNewFile,BufRead  *.py    set foldmethod=indent
+autocmd BufNewFile,BufRead  *.go    set filetype=go
+autocmd BufNewFile,BufRead  .vimrc  set foldmethod=indent
+autocmd VimEnter            *       :if argc() is 0 | NERDTree | endif
 
 " Replace the default fold text
 set foldtext=MyFoldText()
@@ -151,6 +152,7 @@ Bundle 'Rip-Rip/clang_complete'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'fsouza/go.vim'
 Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdtree'
 
 Bundle 'snipMate'
 Bundle 'a.vim'
