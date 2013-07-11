@@ -4,6 +4,7 @@ HOME_BIN=~/bin
 HOME_VIM=~/.vim
 OH_MY_ZSH=~/.oh-my-zsh
 OH_MY_ZSH_PLUGIN=$OH_MY_ZSH/custom/plugins
+ZSH_SYNTAX_HIGHLIGHT_PLUGIN=$OH_MY_ZSH_PLUGIN/zsh-syntax-highlighting
 VIM_BUNDLE=$HOME_VIM/bundle
 VUNDLE_HOME=$VIM_BUNDLE/vundle
 MEOWRC_HOME=~/.meowrc
@@ -25,8 +26,17 @@ fi
 
 ln -fs $MEOWRC_HOME/ykchen.zsh-theme $OH_MY_ZSH/themes/
 mkdir -p $OH_MY_ZSH_PLUGIN
-cd $OH_MY_ZSH_PLUGIN
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+pushd $OH_MY_ZSH_PLUGIN
+if [ ! -d $ZSH_SYNTAX_HIGHLIGHT_PLUGIN ]; then
+    echo 'Installing zsh-syntax-highlighting...'
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_SYNTAX_HIGHLIGHT_PLUGIN
+else
+    echo 'Updating zsh-syntax-highlighting...'
+    pushd $ZSH_SYNTAX_HIGHLIGHT_PLUGIN
+    git pull origin master
+    popd
+fi
+popd
 
 if [ ! -d $MEOWRC_HOME ]; then
     echo 'Installing meowrc...'
