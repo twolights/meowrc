@@ -95,21 +95,21 @@ function! CloseAllIfNoTabsAreOpen(should_write, force)
     let tab_count = tabpagenr("$")
     if tab_count > 1
         if a:should_write
-            let force_command = ":wqa!!"
+            let force_command = ":WQA!!"
         else
-            let force_command = ":qa!!"
+            let force_command = ":QA!!"
         endif
         echoerr "There are " . tab_count . " tabs open. Please type " . force_command . " if you really wanna close all tabs and quit vim."
         return
     endif
     if a:should_write
-        if a:force
+        if a:force == "!"
             wqall!
         else
             wqall
         endif
     else
-        if a:force
+        if a:force == "!"
             qall!
         else
             qall
@@ -117,12 +117,14 @@ function! CloseAllIfNoTabsAreOpen(should_write, force)
     endif
 endfunction
 
-cabbrev wqa<endofline>      call CloseAllIfNoTabsAreOpen(1, 0)
-cabbrev wqa!<endofline>     call CloseAllIfNoTabsAreOpen(1, 1)
-cabbrev wqa!!<endofline>    wqall!
-cabbrev qa<endofline>       call CloseAllIfNoTabsAreOpen(0, 0)
-cabbrev qa!<endofline>      call CloseAllIfNoTabsAreOpen(1, 1)
-cabbrev qa!!<endofline>     qall!
+command! -bang DoWqa    call CloseAllIfNoTabsAreOpen(1, "<bang>")
+command! -bang DoQa     call CloseAllIfNoTabsAreOpen(0, "<bang>")
+
+cabbrev <silent> wqa    DoWqa
+cabbrev <silent> qa     DoQa
+
+cabbrev <silent> WQA!!  wqall
+cabbrev <silent> QA!!   qall
 
 " Snipmate reload
 let snippets_dir='~/.vim/snippets'
