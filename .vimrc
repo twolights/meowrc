@@ -42,32 +42,32 @@ map k gk
 nmap gm :call cursor(0, virtcol('$')/2)<CR>
 
 " MacOS X clipboard support
-vmap Y :w !pbcopy<CR><CR>
+vmap <silent> Y :w !pbcopy<CR><CR>
 nmap YY VY
 
 " Tab-related keybindings
-nmap <C-E>      <Nop>
-nmap <C-E>n     :tabnew<CR>
-nmap <C-E><C-N> :tabnew<CR>
-nmap <C-E>l     :tabn<CR>
-nmap <C-E>]     :tabn<CR>
-nmap <C-E>j     :tabn<CR>
-nmap <C-E>[     :tabn<CR>
-nmap <C-E><C-E> :tabn<CR>
-nmap <C-E>.     :tabedit .<CR>
-nmap <C-E>h     :tabN<CR>
-nmap <C-E>k     :tabN<CR>
-nmap <C-E>q     :tabclose<CR>
-nmap <C-E>1     :tabn 1<CR>
-nmap <C-E>2     :tabn 2<CR>
-nmap <C-E>3     :tabn 3<CR>
-nmap <C-E>4     :tabn 4<CR>
-nmap <C-E>5     :tabn 5<CR>
-nmap <C-E>6     :tabn 6<CR>
-nmap <C-E>7     :tabn 7<CR>
-nmap <C-E>8     :tabn 8<CR>
-nmap <C-E>9     :tabn 9<CR>
-nmap <C-E>0     :tablast<CR>
+nmap <silent> <C-E>      <Nop>
+nmap <silent> <C-E>n     :tabnew<CR>
+nmap <silent> <C-E><C-N> :tabnew<CR>:NERDTree<CR>:wincmd l<CR>:q<CR>
+nmap <silent> <C-E>l     :tabn<CR>
+nmap <silent> <C-E>]     :tabn<CR>
+nmap <silent> <C-E>j     :tabn<CR>
+nmap <silent> <C-E>[     :tabn<CR>
+nmap <silent> <C-E><C-E> :tabn<CR>
+nmap <silent> <C-E>.     :tabedit .<CR>
+nmap <silent> <C-E>h     :tabN<CR>
+nmap <silent> <C-E>k     :tabN<CR>
+nmap <silent> <C-E>q     :tabclose<CR>
+nmap <silent> <C-E>1     :tabn 1<CR>
+nmap <silent> <C-E>2     :tabn 2<CR>
+nmap <silent> <C-E>3     :tabn 3<CR>
+nmap <silent> <C-E>4     :tabn 4<CR>
+nmap <silent> <C-E>5     :tabn 5<CR>
+nmap <silent> <C-E>6     :tabn 6<CR>
+nmap <silent> <C-E>7     :tabn 7<CR>
+nmap <silent> <C-E>8     :tabn 8<CR>
+nmap <silent> <C-E>9     :tabn 9<CR>
+nmap <silent> <C-E>0     :tablast<CR>
 
 " Overrides commonly-used syntax/filetype
 autocmd BufNewFile,BufRead  *.m     set syntax=objc
@@ -78,7 +78,6 @@ autocmd BufNewFile,BufRead  *.c     set noexpandtab
 autocmd BufNewFile,BufRead  *.py    set foldmethod=indent
 autocmd BufNewFile,BufRead  *.go    set filetype=go
 autocmd BufNewFile,BufRead  .vimrc  set foldmethod=indent
-autocmd VimEnter            *       :if argc() is 0 | NERDTree | endif
 
 " Replace the default fold text
 set foldtext=MyFoldText()
@@ -198,3 +197,7 @@ nmap <Leader>a, :Tabularize /,<CR>
 vmap <Leader>a, :Tabularize /,<CR>
 nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
 vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+
+" NERDTree tweaks
+let g:NERDTreeQuitOnOpen=1
+autocmd VimEnter            *       :if argc() is 0 | NERDTree | :wincmd l | :q | :0 | endif
