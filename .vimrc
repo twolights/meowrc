@@ -46,29 +46,32 @@ vmap <silent> Y :w !pbcopy<CR><CR>
 nmap YY VY
 
 " Tab-related keybindings
-nmap <silent> <C-E>         <Nop>
-nmap <silent> <C-E>E        :tabedit %<CR>
-nmap <silent> <C-E>n        :tabnew<CR>
-nmap <silent> <C-E><C-N>    :tabnew<CR>:NERDTree<CR>:wincmd l<CR>:q<CR>
-nmap <silent> <C-E>l        :tabn<CR>
-nmap <silent> <C-E>]        :tabn<CR>
-nmap <silent> <C-E>j        :tabn<CR>
-nmap <silent> <C-E>[        :tabn<CR>
-nmap <silent> <C-E><C-E>    :tabn<CR>
-nmap <silent> <C-E>.        :tabedit .<CR>
-nmap <silent> <C-E>h        :tabN<CR>
-nmap <silent> <C-E>k        :tabN<CR>
-nmap <silent> <C-E>q        :tabclose<CR>
-nmap <silent> <C-E>1        :tabn 1<CR>
-nmap <silent> <C-E>2        :tabn 2<CR>
-nmap <silent> <C-E>3        :tabn 3<CR>
-nmap <silent> <C-E>4        :tabn 4<CR>
-nmap <silent> <C-E>5        :tabn 5<CR>
-nmap <silent> <C-E>6        :tabn 6<CR>
-nmap <silent> <C-E>7        :tabn 7<CR>
-nmap <silent> <C-E>8        :tabn 8<CR>
-nmap <silent> <C-E>9        :tabn 9<CR>
-nmap <silent> <C-E>0        :tablast<CR>
+nmap <silent> <C-E>             <Nop>
+nmap <silent> <C-E>E            :tabedit %<CR>
+nmap <silent> <C-E>n            :tabnew<CR>
+nmap <silent> <C-E><C-N>        :tabnew<CR>:NERDTree<CR>:wincmd l<CR>:q<CR>
+nmap <silent> <C-E>l            :tabn<CR>
+nmap <silent> <C-E>]            :tabn<CR>
+nmap <silent> <C-E>j            :tabn<CR>
+nmap <silent> <C-E>[            :tabn<CR>
+nmap <silent> <C-E><C-E>        :tabn<CR>
+nmap <silent> <C-E>.            :tabedit .<CR>
+nmap <silent> <C-E>h            :tabN<CR>
+nmap <silent> <C-E>k            :tabN<CR>
+nmap <silent> <C-E>q            :tabclose<CR>
+nmap <silent> <C-E>1            :tabn 1<CR>
+nmap <silent> <C-E>2            :tabn 2<CR>
+nmap <silent> <C-E>3            :tabn 3<CR>
+nmap <silent> <C-E>4            :tabn 4<CR>
+nmap <silent> <C-E>5            :tabn 5<CR>
+nmap <silent> <C-E>6            :tabn 6<CR>
+nmap <silent> <C-E>7            :tabn 7<CR>
+nmap <silent> <C-E>8            :tabn 8<CR>
+nmap <silent> <C-E>9            :tabn 9<CR>
+nmap <silent> <C-E>0            :tabn 10<CR>
+nmap <silent> <C-E>-            :tabn 11<CR>
+nmap <silent> <C-E>=            :tabn 12<CR>
+nmap <silent> <C-E><BACKSPACE>  :tablast<CR>
 
 " Overrides commonly-used syntax/filetype
 autocmd BufNewFile,BufRead  *.m     set syntax=objc
