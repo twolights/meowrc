@@ -46,32 +46,67 @@ vmap <silent> Y :w !pbcopy<CR><CR>
 nmap YY VY
 
 " Tab-related keybindings
+let g:lastTabMark=1
+
+function! TabMarkCurrent()
+    let g:lastTabMark = tabpagenr()
+endfunction
+
+function! TabMarkNext(direction)
+    call TabMarkCurrent()
+    if a:direction == 1
+        tabnext
+    elseif a:direction == -1
+        tabNext
+    endif
+endfunction
+
+function! TabMarkSwitchTo(tab_no)
+    call TabMarkCurrent()
+    execute 'tabnext ' . a:tab_no
+endfunction
+
+function! TabMarkEdit(target_name)
+    call TabMarkCurrent()
+    execute 'tabedit ' . a:target_name
+endfunction
+
+function! TabMarkNew()
+    call TabMarkCurrent()
+    tabnew
+endfunction
+
+function! TabMarkClose()
+    call TabMarkCurrent()
+    tabclose
+endfunction
+
 nmap <silent> <C-E>             <Nop>
-nmap <silent> <C-E>E            :tabedit %<CR>
-nmap <silent> <C-E>n            :tabnew<CR>
-nmap <silent> <C-E><C-N>        :tabnew<CR>:NERDTree<CR>:wincmd l<CR>:q<CR>
-nmap <silent> <C-E>l            :tabn<CR>
-nmap <silent> <C-E>]            :tabn<CR>
-nmap <silent> <C-E>j            :tabn<CR>
-nmap <silent> <C-E>[            :tabn<CR>
-nmap <silent> <C-E><C-E>        :tabn<CR>
-nmap <silent> <C-E>.            :tabedit .<CR>
-nmap <silent> <C-E>h            :tabN<CR>
-nmap <silent> <C-E>k            :tabN<CR>
-nmap <silent> <C-E>q            :tabclose<CR>
-nmap <silent> <C-E>1            :tabn 1<CR>
-nmap <silent> <C-E>2            :tabn 2<CR>
-nmap <silent> <C-E>3            :tabn 3<CR>
-nmap <silent> <C-E>4            :tabn 4<CR>
-nmap <silent> <C-E>5            :tabn 5<CR>
-nmap <silent> <C-E>6            :tabn 6<CR>
-nmap <silent> <C-E>7            :tabn 7<CR>
-nmap <silent> <C-E>8            :tabn 8<CR>
-nmap <silent> <C-E>9            :tabn 9<CR>
-nmap <silent> <C-E>0            :tabn 10<CR>
-nmap <silent> <C-E>-            :tabn 11<CR>
-nmap <silent> <C-E>=            :tabn 12<CR>
-nmap <silent> <C-E><BACKSPACE>  :tablast<CR>
+nmap <silent> <C-E>E            :call TabMarkEdit(%)<CR>
+nmap <silent> <C-E>n            :call TabMarkNew()<CR>
+nmap <silent> <C-E><C-N>        :call TabMarkNew()<CR>:NERDTree<CR>:wincmd l<CR>:q<CR>
+nmap <silent> <C-E>l            :call TabMarkNext(1)<CR>
+nmap <silent> <C-E>]            :call TabMarkNext(1)<CR>
+nmap <silent> <C-E>j            :call TabMarkNext(1)<CR>
+nmap <silent> <C-E>[            :call TabMarkNext(-1)<CR>
+nmap <silent> <C-E>h            :call TabMarkNext(-1)<CR>
+nmap <silent> <C-E>k            :call TabMarkNext(-1)<CR>
+nmap <silent> <C-E><C-E>        :call TabMarkSwitchTo(g:lastTabMark)<CR>
+nmap <silent> <C-E>.            :call TabMarkEdit('.')<CR>
+nmap <silent> <C-E>q            :call TabMarkClose()<CR>
+nmap <silent> <C-E>1            :call TabMarkSwitchTo(1)<CR>
+nmap <silent> <C-E>2            :call TabMarkSwitchTo(2)<CR>
+nmap <silent> <C-E>3            :call TabMarkSwitchTo(3)<CR>
+nmap <silent> <C-E>4            :call TabMarkSwitchTo(4)<CR>
+nmap <silent> <C-E>5            :call TabMarkSwitchTo(5)<CR>
+nmap <silent> <C-E>6            :call TabMarkSwitchTo(6)<CR>
+nmap <silent> <C-E>7            :call TabMarkSwitchTo(7)<CR>
+nmap <silent> <C-E>8            :call TabMarkSwitchTo(8)<CR>
+nmap <silent> <C-E>9            :call TabMarkSwitchTo(9)<CR>
+nmap <silent> <C-E>0            :call TabMarkSwitchTo(10)<CR>
+nmap <silent> <C-E>-            :call TabMarkSwitchTo(11)<CR>
+nmap <silent> <C-E>=            :call TabMarkSwitchTo(12)<CR>
+nmap <silent> <C-E><BACKSPACE>  :call TabMarkSwitchTo(tabpagenr("$"))<CR>
 
 " Overrides commonly-used syntax/filetype
 autocmd BufNewFile,BufRead  *.m     set syntax=objc
