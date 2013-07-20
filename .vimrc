@@ -82,7 +82,7 @@ function! TabMarkClose()
 endfunction
 
 nmap <silent> <C-E>             <Nop>
-nmap <silent> <C-E>E            :call TabMarkEdit(%)<CR>
+nmap <silent> <C-E>E            :call TabMarkEdit("%")<CR>
 nmap <silent> <C-E>n            :call TabMarkNew()<CR>
 nmap <silent> <C-E><C-N>        :call TabMarkNew()<CR>:NERDTree<CR>:wincmd l<CR>:q<CR>
 nmap <silent> <C-E>l            :call TabMarkNext(1)<CR>
