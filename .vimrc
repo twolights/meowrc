@@ -27,11 +27,11 @@ cabbrev Vs vsplit
 cabbrev Sp split
 cabbrev Set set
 cabbrev Wq wq
-cabbrev Wqa wqa
+cabbrev Wqa DoWqa
 cabbrev Wa wa
 cabbrev W w
 cabbrev Q q
-cabbrev Qa qa
+cabbrev Qa DoQa
 
 " Remaps <leader>
 let mapleader=','
