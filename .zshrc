@@ -44,6 +44,7 @@ if [ $current_os = 'Linux' ]; then
 elif [ $current_os = 'Darwin' ]; then
     alias ls='ls -aGF'
     alias xcb=xcodebuild
+    alias locate=mdfind
 else
     alias ls='ls -aGF'
 fi  
