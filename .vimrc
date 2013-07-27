@@ -41,8 +41,8 @@ map j gj
 map k gk
 nmap gm :call cursor(0, virtcol('$')/2)<CR>
 
-" MacOS X clipboard support
-vmap <silent> Y :w !pbcopy<CR><CR>
+" System clipboard support
+vmap <silent> Y "+y
 nmap YY VY
 
 " Tab-related keybindings
