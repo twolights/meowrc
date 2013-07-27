@@ -87,10 +87,10 @@ nmap <silent> <C-E>n            :call TabMarkNew()<CR>
 nmap <silent> <C-E><C-N>        :call TabMarkNew()<CR>:NERDTree<CR>:wincmd l<CR>:q<CR>
 nmap <silent> <C-E>l            :call TabMarkNext(1)<CR>
 nmap <silent> <C-E>]            :call TabMarkNext(1)<CR>
-nmap <silent> <C-E>j            :call TabMarkNext(1)<CR>
+nmap <silent> <C-E>j            <Nop>
 nmap <silent> <C-E>[            :call TabMarkNext(-1)<CR>
 nmap <silent> <C-E>h            :call TabMarkNext(-1)<CR>
-nmap <silent> <C-E>k            :call TabMarkNext(-1)<CR>
+nmap <silent> <C-E>k            <Nop>
 nmap <silent> <C-E><C-E>        :call TabMarkSwitchTo(g:lastTabMark)<CR>
 nmap <silent> <C-E>.            :call TabMarkEdit('.')<CR>
 nmap <silent> <C-E>q            :call TabMarkClose()<CR>
@@ -107,6 +107,8 @@ nmap <silent> <C-E>0            :call TabMarkSwitchTo(10)<CR>
 nmap <silent> <C-E>-            :call TabMarkSwitchTo(11)<CR>
 nmap <silent> <C-E>=            :call TabMarkSwitchTo(12)<CR>
 nmap <silent> <C-E><BACKSPACE>  :call TabMarkSwitchTo(tabpagenr("$"))<CR>
+nmap <silent> <C-E>$            :call TabMarkSwitchTo(tabpagenr("$"))<CR>
+nmap <silent> <C-E><C-W>        :call TabMarkClose()<CR>
 
 " Overrides commonly-used syntax/filetype
 autocmd BufNewFile,BufRead  *.m     set syntax=objc
