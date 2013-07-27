@@ -10,15 +10,15 @@ snippet init
 		return self;
 	}
 # NSArray, NSMutableArray
-snippet array
-	NS${1:Mutable}Array* ${2:array} = [[NS$1Array alloc] init${3}];${4}
-snippet aarray
-	NS${1:Mutable}Array* ${2:array} = [NS$1Array array${3}];${4}
-# NSDictionary
+snippet arr
+	NSArray* ${1:array} = @[${2}];${3};
+snippet marr
+	NSMutableArray* ${1:array} = @[${2}].mutableCopy;${3}
+# NSDictionary, NSMutableDictionary
 snippet dict
-	NS${1:Mutable}Dictionary* ${2:dict} = [[NS$1Dictionary alloc] init${3}];${4}
-snippet adict
-	NS${1:Mutable}Dictionary* ${2:dict} = [NS$1Dictionary dictionary${3}];${4}
+	NSDictionary* ${1:dict} = @{${2}};${3};
+snippet mdict
+	NSMutableDictionary* ${1:dict} = @{${2}}.mutableCopy;${3};
 # for (object in array)
 snippet forin
 	for(${1:Class}* ${2:some$1} in ${3:array}) {
