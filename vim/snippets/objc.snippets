@@ -11,14 +11,14 @@ snippet init
 	}
 # NSArray, NSMutableArray
 snippet arr
-	NSArray* ${1:array} = @[${2}];${3};
+	NSArray* ${1:array} = @[${2}];${3}
 snippet marr
 	NSMutableArray* ${1:array} = @[${2}].mutableCopy;${3}
 # NSDictionary, NSMutableDictionary
 snippet dict
-	NSDictionary* ${1:dict} = @{${2}};${3};
+	NSDictionary* ${1:dict} = @{${2}};${3}
 snippet mdict
-	NSMutableDictionary* ${1:dict} = @{${2}}.mutableCopy;${3};
+	NSMutableDictionary* ${1:dict} = @{${2}}.mutableCopy;${3}
 # for (object in array)
 snippet forin
 	for(${1:Class}* ${2:some$1} in ${3:array}) {

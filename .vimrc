@@ -242,3 +242,7 @@ vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
 " NERDTree tweaks
 let g:NERDTreeQuitOnOpen=1
 autocmd VimEnter            *       :if argc() is 0 | NERDTree | :wincmd l | :q | :0 | endif
+
+" CtrlP tweaks
+let g:ctrlp_max_files = 1000000
+let g:ctrlp_user_command = 'find %s/* -type f'
