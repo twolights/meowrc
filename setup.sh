@@ -11,7 +11,7 @@ MEOWRC_HOME=~/.meowrc
 MEOWRC_BIN=$MEOWRC_HOME/bin
 MEOWRC_VIM=$MEOWRC_HOME/vim
 
-RC_ITEMS=".zshrc .vimrc .screenrc .gitconfig .gitignore_global"
+RC_ITEMS=".zshrc .vimrc .screenrc .gitconfig .gitignore_global .inputrc"
 
 mkdir -p $VIM_BUNDLE
 if [ ! -d $VUNDLE_HOME ]; then
