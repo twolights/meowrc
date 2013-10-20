@@ -86,10 +86,12 @@ nmap <silent> <C-E>E            :call TabMarkEdit("%")<CR>
 nmap <silent> <C-E>n            :call TabMarkNew()<CR>
 nmap <silent> <C-E><C-N>        :call TabMarkNew()<CR>:NERDTree<CR>:wincmd l<CR>:q<CR>
 nmap <silent> <C-E>l            :call TabMarkNext(1)<CR>
+nmap <silent> <C-E>L            :tabm +1<CR>
 nmap <silent> <C-E>]            :call TabMarkNext(1)<CR>
 nmap <silent> <C-E>j            <Nop>
 nmap <silent> <C-E>[            :call TabMarkNext(-1)<CR>
 nmap <silent> <C-E>h            :call TabMarkNext(-1)<CR>
+nmap <silent> <C-E>H            :tabm -1<CR>
 nmap <silent> <C-E>k            <Nop>
 nmap <silent> <C-E><C-E>        :call TabMarkSwitchTo(g:lastTabMark)<CR>
 nmap <silent> <C-E>.            :call TabMarkEdit('.')<CR>
