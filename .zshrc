@@ -25,7 +25,7 @@ export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx pip git-flow brew django vi-mode vagrant rvm zsh-syntax-highlighting)
+plugins=(git osx pip git-flow brew django vi-mode vagrant rvm zsh-syntax-highlighting tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,3 +85,7 @@ stty erase '' >& /dev/null
 [[ -s "/Users/ykchen/.rvm/scripts/rvm" ]] && source "/Users/ykchen/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+man () {
+    /usr/bin/man $@ | col -b | vim -R -c 'set ft=man nomod nolist' -
+}
