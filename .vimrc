@@ -113,6 +113,7 @@ nmap <silent> <C-E>$            :call TabMarkSwitchTo(tabpagenr("$"))<CR>
 nmap <silent> <C-E><C-W>        :call TabMarkClose()<CR>
 
 " Overrides commonly-used syntax/filetype
+autocmd BufNewFile,BufRead  *.sql   set syntax=mysql
 autocmd BufNewFile,BufRead  *.m     set syntax=objc
 autocmd BufNewFile,BufRead  SCons*  set filetype=scons 
 autocmd BufNewFile,BufRead  *.json  set syntax=json
