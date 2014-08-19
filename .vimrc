@@ -113,15 +113,18 @@ nmap <silent> <C-E>$            :call TabMarkSwitchTo(tabpagenr("$"))<CR>
 nmap <silent> <C-E><C-W>        :call TabMarkClose()<CR>
 
 " Overrides commonly-used syntax/filetype
-autocmd BufNewFile,BufRead  *.sql   set syntax=mysql
-autocmd BufNewFile,BufRead  *.m     set syntax=objc
-autocmd BufNewFile,BufRead  SCons*  set filetype=scons 
-autocmd BufNewFile,BufRead  *.json  set syntax=json
-autocmd BufNewFile,BufRead  *.scss  set filetype=scss
-autocmd BufNewFile,BufRead  *.c     set noexpandtab
-autocmd BufNewFile,BufRead  *.py    set foldmethod=indent
-autocmd BufNewFile,BufRead  *.go    set filetype=go
-autocmd BufNewFile,BufRead  .vimrc  set foldmethod=indent
+autocmd BufNewFile,BufRead  *.sql       set syntax=mysql
+autocmd BufNewFile,BufRead  *.m         set syntax=objc
+autocmd BufNewFile,BufRead  Podfile     set syntax=ruby
+autocmd BufNewFile,BufRead  *.podspec   set syntax=ruby
+autocmd BufNewFile,BufRead  SCons*      set filetype=scons 
+autocmd BufNewFile,BufRead  *.json      set syntax=json
+autocmd BufNewFile,BufRead  *.scss      set filetype=scss
+autocmd BufNewFile,BufRead  *.c         set noexpandtab
+autocmd BufNewFile,BufRead  *.py        set foldmethod=indent
+autocmd BufNewFile,BufRead  *.go        set filetype=go
+autocmd BufNewFile,BufRead  *.swift     set filetype=swift
+autocmd BufNewFile,BufRead  .vimrc      set foldmethod=indent
 
 " Replace the default fold text
 set foldtext=MyFoldText()
@@ -198,6 +201,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'fsouza/go.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
+Bundle 'Keithbsmiley/swift.vim'
 
 Bundle 'snipMate'
 Bundle 'a.vim'
