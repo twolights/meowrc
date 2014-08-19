@@ -25,7 +25,7 @@ export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx pip git-flow brew django vi-mode vagrant rvm zsh-syntax-highlighting tmux)
+plugins=(git osx pip git-flow brew django vi-mode vagrant rvm zsh-syntax-highlighting tmux vagrant docker)
 
 source $ZSH/oh-my-zsh.sh
 
