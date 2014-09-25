@@ -202,6 +202,7 @@ Bundle 'fsouza/go.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Keithbsmiley/swift.vim'
+Bundle 'davidhalter/jedi-vim'
 
 Bundle 'snipMate'
 Bundle 'a.vim'
