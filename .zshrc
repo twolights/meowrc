@@ -49,10 +49,18 @@ else
     alias ls='ls -aGF'
 fi  
 
+ptipython_check=`which ptipython`
+if [ -x $ptipython_check ]; then
+    alias ipy='ptipython --vi'
+else
+    alias ipy=ipython
+fi
+
+unset ptipython_check
+
 alias bpy=bpython
 alias g=egrep
 alias h='history'
-alias ipy=ipython
 alias j='jobs -l'
 alias mv='mv -i'
 alias n=nslookup
