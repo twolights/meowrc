@@ -15,6 +15,11 @@ diff        =
 	co      = checkout
     stat    = status
     br      = branch
+
+[merge]
+    tool    = vimdiff
+    conflictstyle = diff3
+
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
