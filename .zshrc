@@ -63,6 +63,7 @@ alias g=egrep
 alias h='history'
 alias j='jobs -l'
 alias mv='mv -i'
+alias mssh='mosh --ssh=ssh'
 alias n=nslookup
 alias p="ps -axwww"
 alias psm="psu $USER"
