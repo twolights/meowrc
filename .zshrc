@@ -7,7 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 export ZSH_THEME="ykchen"
 
-export LANG="zh_TW.UTF-8"
+export LANG="en_US.UTF-8"
 
 export REPORTTIME=2
 
