@@ -9,6 +9,7 @@ export ZSH_THEME="ykchen"
 
 export LANG="en_US.UTF-8"
 export LC_ALL=$LANG
+export LC_CTYPE=$LANG
 
 export REPORTTIME=2
 
