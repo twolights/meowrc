@@ -5,7 +5,7 @@ external    = vimdiff-git.sh
 diff        =
 
 [user]
-	email = twolights.chen@ipeen.com.tw
+	email = twolights@gmail.com
 	name = Yi-Kuang Chen
 [core]
 	quotepath = false
@@ -19,10 +19,3 @@ diff        =
 [merge]
     tool    = vimdiff
     conflictstyle = diff3
-
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
