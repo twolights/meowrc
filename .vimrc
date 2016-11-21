@@ -125,6 +125,7 @@ autocmd BufNewFile,BufRead  *.py        set foldmethod=indent
 autocmd BufNewFile,BufRead  *.go        set filetype=go
 autocmd BufNewFile,BufRead  *.swift     set filetype=swift
 autocmd BufNewFile,BufRead  .vimrc      set foldmethod=indent
+autocmd BufNewFile,BufRead  apple-app-site-association set syntax=json
 
 " Replace the default fold text
 set foldtext=MyFoldText()
@@ -190,7 +191,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-surround'
-Bundle 'tsaleh/vim-matchit'
+Bundle 'vim-scripts/matchit.zip'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'godlygeek/tabular'
 Bundle 'mileszs/ack.vim'
@@ -213,6 +214,8 @@ Bundle 'nginx.vim'
 Bundle 'scons.vim'
 Bundle 'JSON.vim'
 Bundle 'python.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 " Bundle 'remote-PHP-debugger'
 " Bundle 'PIV'
 
