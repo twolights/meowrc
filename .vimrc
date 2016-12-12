@@ -126,6 +126,7 @@ autocmd BufNewFile,BufRead  *.go        set filetype=go
 autocmd BufNewFile,BufRead  *.swift     set filetype=swift
 autocmd BufNewFile,BufRead  .vimrc      set foldmethod=indent
 autocmd BufNewFile,BufRead  apple-app-site-association set syntax=json
+autocmd BufNewFile,BufRead  Dockerfile   set syntax=Dockerfile
 
 " Replace the default fold text
 set foldtext=MyFoldText()
@@ -194,24 +195,24 @@ Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'godlygeek/tabular'
-Bundle 'mileszs/ack.vim'
+" Bundle 'mileszs/ack.vim'
 Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'rodjek/vim-puppet'
-Bundle 'Rip-Rip/clang_complete'
+" Bundle 'rodjek/vim-puppet'
+" Bundle 'Rip-Rip/clang_complete'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'fsouza/go.vim'
-Bundle 'tpope/vim-fugitive'
+" Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
-Bundle 'Keithbsmiley/swift.vim'
+" Bundle 'Keithbsmiley/swift.vim'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'ekalinin/Dockerfile.vim'
 
 Bundle 'snipMate'
 Bundle 'a.vim'
 Bundle 'VisIncr'
-Bundle 'cocoa.vim'
+" Bundle 'cocoa.vim'
 Bundle 'nginx.vim'
-Bundle 'scons.vim'
+" Bundle 'scons.vim'
 Bundle 'JSON.vim'
 Bundle 'python.vim'
 Plugin 'pangloss/vim-javascript'
