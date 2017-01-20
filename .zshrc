@@ -60,7 +60,7 @@ fi
 
 unset ptipython_check
 
-alias bpy=bpython
+alias ans=ansible
 alias g=egrep
 alias h='history'
 alias j='jobs -l'
