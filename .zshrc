@@ -27,7 +27,7 @@ export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx pip git-flow vi-mode rvm zsh-syntax-highlighting aws docker docker-compose)
+plugins=(git osx pip git-flow vi-mode zsh-syntax-highlighting docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
