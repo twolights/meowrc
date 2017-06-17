@@ -97,6 +97,9 @@ stty erase '' >& /dev/null
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+export ANDROID_HOME=${HOME}/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools:${PATH}:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools
+
 man () {
     /usr/bin/man $@ | col -b | vim -R -c 'set ft=man nomod nolist' -
 }
