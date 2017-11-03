@@ -17,6 +17,8 @@ diff        =
     br      = branch
     st      = status
     l       = log
+    dif     = diff
+    a       = add
 
 [merge]
     tool    = vimdiff
