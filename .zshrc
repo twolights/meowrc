@@ -27,7 +27,7 @@ export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx pip git-flow vi-mode zsh-syntax-highlighting docker docker-compose)
+plugins=(git osx pip git-flow vi-mode zsh-syntax-highlighting docker docker-compose autojump kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -63,10 +63,11 @@ unset ptipython_check
 alias ans=ansible
 alias g=egrep
 alias h='history'
-alias j='jobs -l'
+alias jl='jobs -l'
 alias mv='mv -i'
 alias mssh='mosh --ssh=ssh'
 alias n=nslookup
+alias k=kubectl
 alias p="ps -axwww"
 alias psm="psu $USER"
 alias psr="psu root"

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+OS=`uname`
+
 HOME_BIN=~/bin
 HOME_VIM=~/.vim
 OH_MY_ZSH=~/.oh-my-zsh
@@ -68,3 +70,7 @@ done
 echo 'done!'
 
 vim +'BundleInstall!' +qa
+
+if [ $OS = 'Darwin' ]; then
+    brew install autojump
+fi
