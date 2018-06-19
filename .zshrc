@@ -64,6 +64,7 @@ alias ans=ansible
 alias g=egrep
 alias h='history'
 alias jl='jobs -l'
+alias mk='minikube'
 alias mv='mv -i'
 alias mssh='mosh --ssh=ssh'
 alias n=nslookup
