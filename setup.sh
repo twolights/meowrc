@@ -13,6 +13,8 @@ MEOWRC_HOME=~/.meowrc
 MEOWRC_BIN=$MEOWRC_HOME/bin
 MEOWRC_VIM=$MEOWRC_HOME/vim
 
+SECRETS_HOME=~/.secrets
+
 RC_ITEMS=".zshrc .vimrc .screenrc .gitconfig .gitignore_global .inputrc .tmux.conf"
 
 mkdir -p $VIM_BUNDLE
@@ -67,6 +69,10 @@ echo -n "Linking vim directories... "
 for d in $MEOWRC_VIM/*; do
     ln -fs $d $HOME_VIM/
 done
+echo 'done!'
+
+echo -n "Creating secrets directory... "
+mkdir -p $SECRETS_HOME
 echo 'done!'
 
 vim +'BundleInstall!' +qa

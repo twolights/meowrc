@@ -47,6 +47,10 @@ elif [ $current_os = 'Darwin' ]; then
     alias ls='ls -aGF'
     alias xcb=xcodebuild
     alias locate=mdfind
+    if [ -d '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/' ]; then
+        source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+        source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+    fi
 else
     alias ls='ls -aGF'
 fi  
