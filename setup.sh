@@ -73,6 +73,7 @@ echo 'done!'
 
 echo -n "Creating secrets directory... "
 mkdir -p $SECRETS_HOME
+chmod 700 $SECRETS_HOME
 echo 'done!'
 
 vim +'BundleInstall!' +qa
