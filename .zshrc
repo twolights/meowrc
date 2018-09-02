@@ -85,6 +85,8 @@ alias ssh='ssh -C -2'
 alias t='telnet'
 alias termcolor='env TERM=xterm-color'
 alias tempboard='echo -n -e "\033]0;Pasteboard\007"'
+alias tell='run-and-notify.sh 0'
+alias keeptell='run-and-notify.sh 1'
 
 unalias history
 
