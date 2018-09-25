@@ -27,7 +27,7 @@ export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx pip git-flow vi-mode zsh-syntax-highlighting docker docker-compose autojump kubectl)
+plugins=(git osx pip git-flow vi-mode zsh-syntax-highlighting docker docker-compose autojump kubectl terraform)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,6 +84,7 @@ alias scp='scp -oProtocol=2'
 alias ssh='ssh -C -2'
 alias t='telnet'
 alias termcolor='env TERM=xterm-color'
+alias tf=terraform
 alias tempboard='echo -n -e "\033]0;Pasteboard\007"'
 alias tell='run-and-notify.sh 0'
 alias keeptell='run-and-notify.sh 1'

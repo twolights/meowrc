@@ -208,6 +208,7 @@ Bundle 'scrooloose/nerdtree'
 " Bundle 'davidhalter/jedi-vim'
 Bundle 'ekalinin/Dockerfile.vim'
 Bundle 'tomlion/vim-solidity'
+Bundle 'hashivim/vim-terraform'
 
 Bundle 'snipMate'
 Bundle 'a.vim'
