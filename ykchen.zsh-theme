@@ -8,9 +8,6 @@ function my_git_prompt_info() {
 
 if [ $WINDOW ]; then
     PROMPT='%{$fg_bold[$NCOLOR]%}%n%{$reset_color%}@%m [%{$fg_bold[white]%}%~%{$reset_color%}] %{$fg_bold[blue]%}$(my_git_prompt_info)%{$reset_color%}%{$fb_bold[white]%}[W$WINDOW] %{$reset_color%}'
-elif [ $TMUX_PANE ]; then
-    TMUX_PANE_NO=$(echo $TMUX_PANE | cut -c 2-)
-    PROMPT='%{$fg_bold[$NCOLOR]%}%n%{$reset_color%}@%m [%{$fg_bold[white]%}%~%{$reset_color%}] %{$fg_bold[blue]%}$(my_git_prompt_info)%{$reset_color%}%{$fb_bold[white]%}[W$TMUX_PANE_NO] %{$reset_color%}'
 else
     PROMPT='%{$fg_bold[$NCOLOR]%}%n%{$reset_color%}@%m [%{$fg_bold[white]%}%~%{$reset_color%}] %{$fg_bold[blue]%}$(my_git_prompt_info)%{$reset_color%}'
 fi
