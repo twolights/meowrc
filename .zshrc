@@ -27,7 +27,7 @@ export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx pip git-flow vi-mode zsh-syntax-highlighting docker docker-compose autojump kubectl terraform)
+plugins=(git osx pip git-flow vi-mode zsh-syntax-highlighting docker docker-compose meteor kubectl terraform)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -72,6 +72,7 @@ alias g=egrep
 alias h='history'
 alias jl='jobs -l'
 alias mk='minikube'
+alias m='meteor'
 alias mv='mv -i'
 alias mssh='mosh --ssh=ssh'
 alias n=nslookup
