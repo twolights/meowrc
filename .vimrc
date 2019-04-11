@@ -127,6 +127,7 @@ autocmd BufNewFile,BufRead  *.swift     set filetype=swift
 autocmd BufNewFile,BufRead  .vimrc      set foldmethod=indent
 autocmd BufNewFile,BufRead  apple-app-site-association set syntax=json
 autocmd BufNewFile,BufRead  Dockerfile  set syntax=Dockerfile
+autocmd BufNewFile,BufRead  *.tf        set syntax=terraform
 autocmd Filetype            yaml        setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 " Replace the default fold text
