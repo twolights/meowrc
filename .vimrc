@@ -197,33 +197,24 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'Lokaltog/vim-easymotion'
-" Bundle 'godlygeek/tabular'
-" Bundle 'mileszs/ack.vim'
 Bundle 'cakebaker/scss-syntax.vim'
-" Bundle 'rodjek/vim-puppet'
-" Bundle 'Rip-Rip/clang_complete'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'fsouza/go.vim'
-" Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
-" Bundle 'Keithbsmiley/swift.vim'
 " Bundle 'davidhalter/jedi-vim'
 Bundle 'ekalinin/Dockerfile.vim'
 Bundle 'tomlion/vim-solidity'
 Bundle 'hashivim/vim-terraform'
+" Bundle 'python-mode/python-mode'
 
 Bundle 'snipMate'
 Bundle 'a.vim'
 Bundle 'VisIncr'
-" Bundle 'cocoa.vim'
 Bundle 'nginx.vim'
-" Bundle 'scons.vim'
 Bundle 'JSON.vim'
 Bundle 'python.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-" Bundle 'remote-PHP-debugger'
-" Bundle 'PIV'
 
 " Clears SignColumn for vim-gitgutter
 highlight clear SignColumn
@@ -264,3 +255,6 @@ let g:NERDTreeQuitOnOpen=1
 " CtrlP tweaks
 let g:ctrlp_max_files = 1000000
 let g:ctrlp_user_command = 'find %s/* -type f'
+
+" python-mode: Use Python 3 syntax
+let g:pymode_python = 'python3'
