@@ -13,13 +13,14 @@ diff        =
 	ignorecase = false
 
 [alias]
-	co      = checkout
-    stat    = status
-    br      = branch
-    st      = status
-    l       = log
-    dif     = diff
     a       = add
+    br      = branch
+    co      = checkout
+    dif     = diff
+    l       = log
+    mt      = mergetool
+    st      = status
+    stat    = status
 
 [merge]
     tool    = vimdiff
