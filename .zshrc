@@ -13,6 +13,9 @@ export LC_CTYPE=$LANG
 
 export REPORTTIME=2
 
+# Let zsh automatically report tasks that run over 60 seconds when done
+export AUTO_REPORT_LONGTASKS_THRESHOLD=60
+
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
 
@@ -27,7 +30,7 @@ export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx pip git-flow vi-mode zsh-syntax-highlighting docker docker-compose meteor kubectl terraform)
+plugins=(git osx pip git-flow vi-mode zsh-syntax-highlighting docker docker-compose meteor kubectl terraform aws auto-report-longtasks)
 
 source $ZSH/oh-my-zsh.sh
 

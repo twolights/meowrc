@@ -7,6 +7,7 @@ HOME_VIM=~/.vim
 OH_MY_ZSH=~/.oh-my-zsh
 OH_MY_ZSH_PLUGIN=$OH_MY_ZSH/custom/plugins
 ZSH_SYNTAX_HIGHLIGHT_PLUGIN=$OH_MY_ZSH_PLUGIN/zsh-syntax-highlighting
+AUTO_REPORT_LONGTASKS_PLUGIN=$OH_MY_ZSH_PLUGIN/auto-report-longtasks
 VIM_BUNDLE=$HOME_VIM/bundle
 VUNDLE_HOME=$VIM_BUNDLE/vundle
 MEOWRC_HOME=~/.meowrc
@@ -51,6 +52,11 @@ else
     git pull origin master
     popd
 fi
+
+echo -n 'Linking zsh plugin: auto-report-longtasks...'
+mkdir -p $AUTO_REPORT_LONGTASKS_PLUGIN
+ln -fs $MEOWRC_HOME/auto-report-longtasks.plugin.zsh $AUTO_REPORT_LONGTASKS_PLUGIN/
+echo 'done!'
 
 echo -n "Linking rc's... "
 for rc in $RC_ITEMS; do
