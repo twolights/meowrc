@@ -14,11 +14,14 @@ diff        =
 
 [alias]
     a       = add
+    ad      = add
+    cm      = commit
     br      = branch
     co      = checkout
     dif     = diff
     l       = log
     mt      = mergetool
+    reb     = rebase
     st      = status
     stat    = status
 
