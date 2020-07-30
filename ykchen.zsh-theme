@@ -7,9 +7,9 @@ function my_git_prompt_info() {
 }
 
 if [ $WINDOW ]; then
-    PROMPT='%{$fg_bold[$NCOLOR]%}%n%{$reset_color%}@%m [%{$fg_bold[white]%}%~%{$reset_color%}] %{$fg_bold[blue]%}$(my_git_prompt_info)%{$reset_color%}%{$fb_bold[white]%}[W$WINDOW] %{$reset_color%}'
+    PROMPT='%{$fg_bold[cyan]%}[%*]%{$reset_color%} %{$fg_bold[$NCOLOR]%}%n%{$reset_color%}@%m [%{$fg_bold[white]%}%~%{$reset_color%}] %{$fg_bold[blue]%}$(my_git_prompt_info)%{$reset_color%}%{$fb_bold[white]%}[W$WINDOW] %{$reset_color%}'
 else
-    PROMPT='%{$fg_bold[$NCOLOR]%}%n%{$reset_color%}@%m [%{$fg_bold[white]%}%~%{$reset_color%}] %{$fg_bold[blue]%}$(my_git_prompt_info)%{$reset_color%}'
+    PROMPT='%{$fg_bold[cyan]%}[%*]%{$reset_color%} %{$fg_bold[$NCOLOR]%}%n%{$reset_color%}@%m [%{$fg_bold[white]%}%~%{$reset_color%}] %{$fg_bold[blue]%}$(my_git_prompt_info)%{$reset_color%}'
 fi
 
 ZSH_THEME_GIT_PROMPT_PREFIX="["
