@@ -11,7 +11,7 @@ _command_precmd() {
         time_last_command=$(($SECONDS - $timer))
         if [ $time_last_command -ge $threshold ]; then
             last_command=`fc -ln -1`
-            slack-notify.sh "Last long task ($last_command) just finished"
+            slack-notify.sh 'Last long task just finished: ```'"$last_command"'```'
         fi
         unset timer
     fi
