@@ -30,7 +30,7 @@ export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx pip git-flow vi-mode zsh-syntax-highlighting docker docker-compose meteor kubectl terraform aws auto-report-longtasks)
+plugins=(git macos pip git-flow vi-mode zsh-syntax-highlighting docker docker-compose meteor kubectl terraform aws auto-report-longtasks)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,7 +101,7 @@ unalias history
 export EDITOR=vim
 export VISUAL=vim
 
-export PATH=/usr/local/bin:/usr/local/sbin:/sbin:$PATH:~:~/bin:.
+export PATH=/usr/local/bin:/usr/local/sbin:/sbin:$PATH:~:~/bin:/opt/homebrew/bin:.
 
 setopt extendedhistory
 export HISTTIMEFORMAT="%y-%d-%m_%H:%M:%S "
