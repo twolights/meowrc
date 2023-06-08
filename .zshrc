@@ -119,3 +119,8 @@ export PATH=${PATH}:${ANDROID_HOME}/tools:${PATH}:${ANDROID_HOME}/tools/bin:${AN
 man () {
     /usr/bin/man $@ | col -b | vim -R -c 'set ft=man nomod nolist' -
 }
+
+if [ -d "env" ]; then
+    echo "Python virtualenv detected in current path [$PWD], activating it"
+    . env/bin/activate
+fi
