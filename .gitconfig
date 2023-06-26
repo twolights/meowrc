@@ -20,6 +20,7 @@ diff        =
     co      = checkout
     dif     = diff
     l       = log
+    ll      = log --name-status
     mt      = mergetool
     reb     = rebase
     st      = status
