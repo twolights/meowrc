@@ -16,6 +16,7 @@ diff        =
     a       = add
     ad      = add
     cm      = commit
+    cpk     = cherry-pick
     br      = branch
     co      = checkout
     dif     = diff
@@ -23,6 +24,7 @@ diff        =
     ll      = log --name-status
     mt      = mergetool
     reb     = rebase
+    rst     = reset
     st      = status
     stat    = status
 
