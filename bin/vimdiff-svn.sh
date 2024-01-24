@@ -1,3 +1,3 @@
 #!/bin/sh
 
-vimdiff $6 $7
+nvim -d $6 $7

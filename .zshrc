@@ -74,12 +74,13 @@ alias ans=ansible
 alias g=egrep
 alias h='history'
 alias jl='jobs -l'
-alias mk='minikube'
-alias m='meteor'
-alias mv='mv -i'
-alias mssh='mosh --ssh=ssh'
-alias n=nslookup
 alias k=kubectl
+alias keeptell='run-and-notify.sh 1'
+alias m='meteor'
+alias mk='minikube'
+alias mssh='mosh --ssh=ssh'
+alias mv='mv -i'
+alias n=nslookup
 alias p="ps -axwww"
 alias psm="psu $USER"
 alias psr="psu root"
@@ -90,16 +91,17 @@ alias sc='scons -Q'
 alias scp='scp -oProtocol=2'
 alias ssh='ssh -C -2'
 alias t='telnet'
+alias tell='run-and-notify.sh 0'
+alias tempboard='echo -n -e "\033]0;Pasteboard\007"'
 alias termcolor='env TERM=xterm-color'
 alias tf=terraform
-alias tempboard='echo -n -e "\033]0;Pasteboard\007"'
-alias tell='run-and-notify.sh 0'
-alias keeptell='run-and-notify.sh 1'
+alias vim='nvim'
+alias vimdiff='nvim -d'
 
 unalias history
 
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=nvim
+export VISUAL=nvim
 
 export PATH=/usr/local/bin:/usr/local/sbin:/sbin:$PATH:~:~/bin:/opt/homebrew/bin:.
 
@@ -117,7 +119,7 @@ export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools:${PATH}:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools
 
 man () {
-    /usr/bin/man $@ | col -b | vim -R -c 'set ft=man nomod nolist' -
+    /usr/bin/man $@ | col -b | nvim -R -c 'set ft=man nomod nolist' -
 }
 
 if [ -d "env" ]; then

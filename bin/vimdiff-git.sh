@@ -1,3 +1,3 @@
 #!/bin/sh
 
-vimdiff $2 $5
+nvim -d $2 $5
