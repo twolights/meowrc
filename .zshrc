@@ -71,6 +71,7 @@ fi
 unset ptipython_check
 
 alias ans=ansible
+alias cat=bat
 alias g=egrep
 alias h='history'
 alias jl='jobs -l'
