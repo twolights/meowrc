@@ -104,13 +104,13 @@ alias tell='run-and-notify.sh 0'
 alias tempboard='echo -n -e "\033]0;Pasteboard\007"'
 alias termcolor='env TERM=xterm-color'
 alias tf=terraform
-alias vim='nvim'
-alias vimdiff='nvim -d'
+# alias vim='nvim'
+# alias vimdiff='nvim -d'
 
 unalias history
 
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=vim
+export VISUAL=vim
 
 export PATH=/usr/local/bin:/usr/local/sbin:/sbin:$PATH:~:~/bin:/opt/homebrew/bin:.
 

@@ -13,6 +13,7 @@ set hlsearch
 set incsearch
 set ruler
 set sw=4
+set mouse=
 syntax on
 
 " Appearance settings
@@ -42,7 +43,7 @@ map k gk
 nmap gm :call cursor(0, virtcol('$')/2)<CR>
 
 " System clipboard support
-vmap <silent> Y "+y
+vmap Y "+y
 nmap YY VY
 
 " Tab-related keybindings

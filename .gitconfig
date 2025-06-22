@@ -29,5 +29,5 @@ diff        =
     stat    = status
 
 [merge]
-    tool    = nvim -d
+    tool    = vimdiff
     conflictstyle = diff3
