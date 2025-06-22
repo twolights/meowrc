@@ -121,7 +121,7 @@ export KEYTIMEOUT=1
 stty erase '' >& /dev/null
 
 export ANDROID_HOME=${HOME}/Library/Android/sdk
-export PATH=${PATH}:${ANDROID_HOME}/tools:${PATH}:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools
+export PATH=${PATH}:${ANDROID_HOME}/tools:${PATH}:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools:~/.local/bin
 
 man () {
     /usr/bin/man $@ | col -b | nvim -R -c 'set ft=man nomod nolist' -
