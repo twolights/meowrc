@@ -128,6 +128,9 @@ man () {
 }
 
 if [ -d "env" ]; then
-    echo "Python virtualenv detected in current path [$PWD], activating it"
+    echo "Python virtual environment detected in current path [$PWD/env], activating it"
     . env/bin/activate
+elif [ -d ".venv" ]; then
+    echo "Python virtual environment detected in current path [$PWD/.venv], activating it"
+    . .venv/bin/activate
 fi
