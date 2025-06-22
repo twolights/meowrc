@@ -75,6 +75,9 @@ elif [ -x $batcat_check ]; then
     alias cat=bat
 fi
 
+unset bat_check
+unset batcat_check
+
 alias ans=ansible
 alias g=egrep
 alias h='history'
