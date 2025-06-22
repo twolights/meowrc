@@ -120,10 +120,6 @@ export KEYTIMEOUT=1
 
 stty erase '' >& /dev/null
 
-[[ -s "/Users/ykchen/.rvm/scripts/rvm" ]] && source "/Users/ykchen/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools:${PATH}:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools
 
