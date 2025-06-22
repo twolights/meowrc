@@ -73,10 +73,10 @@ unset ptipython_check
 bat_check=`which bat`
 batcat_check=`which batcat`
 
-if [ -x $bat_check ]; then
-    alias cat=bat
-elif [ -x $batcat_check ]; then
+if [ -x $batcat_check ]; then
     alias cat=batcat
+elif [ -x $batcat_check ]; then
+    alias cat=bat
 fi
 
 alias ans=ansible
