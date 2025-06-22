@@ -94,7 +94,3 @@ echo 'done!'
 echo
 
 vim +'BundleInstall!' +qa
-
-if [ $OS = 'Darwin' ]; then
-    brew install autojump
-fi
