@@ -50,6 +50,9 @@ elif [ $current_os = 'Darwin' ]; then
     alias ls='ls -aGF'
     alias xcb=xcodebuild
     alias locate=mdfind
+    eval "$(brew shellenv)"
+    autoload -Uz compinit
+    compinit
 else
     alias ls='ls -aGF'
 fi  
