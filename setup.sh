@@ -3,6 +3,7 @@
 OS=`uname`
 
 HOME_BIN=~/bin
+HOME_CONFIG=~/.config
 HOME_VIM=~/.vim
 OH_MY_ZSH=~/.oh-my-zsh
 OH_MY_ZSH_PLUGIN=$OH_MY_ZSH/custom/plugins
@@ -81,6 +82,16 @@ echo -n "Creating secrets directory... "
 mkdir -p $SECRETS_HOME
 chmod 700 $SECRETS_HOME
 echo 'done!'
+
+echo -n "Creating .config directory... "
+mkdir -p $HOME_CONFIG
+echo 'done!'
+
+echo "Cloning LazyVim... "
+git clone https://github.com/LazyVim/starter $HOME_CONFIG/nvim
+rm -fr $HOME_CONFIG/nvim/.git
+echo 'done!'
+echo
 
 vim +'BundleInstall!' +qa
 
