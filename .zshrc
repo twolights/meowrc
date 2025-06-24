@@ -43,20 +43,6 @@ if [ -f ~/.local_zshrc ]; then
     source ~/.local_zshrc
 fi
 
-current_os=`uname -s`
-if [ $current_os = 'Linux' ]; then
-    alias ls='ls -aF --color' 
-elif [ $current_os = 'Darwin' ]; then
-    alias ls='ls -aGF'
-    alias xcb=xcodebuild
-    alias locate=mdfind
-    eval "$(brew shellenv)"
-    autoload -Uz compinit
-    compinit
-else
-    alias ls='ls -aGF'
-fi  
-
 ptipython_check=`which ptipython`
 if [ -x $ptipython_check ]; then
     alias ipy='ptipython --vi'
@@ -133,3 +119,18 @@ elif [ -d ".venv" ]; then
     echo "Python virtual environment detected in current path [$PWD/.venv], activating it"
     . .venv/bin/activate
 fi
+
+current_os=`uname -s`
+if [ $current_os = 'Linux' ]; then
+    alias ls='ls -aF --color' 
+elif [ $current_os = 'Darwin' ]; then
+    alias ls='ls -aGF'
+    alias xcb=xcodebuild
+    alias locate=mdfind
+    eval "$(brew shellenv)"
+    autoload -Uz compinit
+    compinit
+else
+    alias ls='ls -aGF'
+fi  
+
