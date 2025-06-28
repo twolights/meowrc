@@ -1,6 +1,6 @@
 #!/bin/bash
 
-OS=`uname`
+OS=$(uname)
 
 HOME_BIN=~/bin
 HOME_CONFIG=~/.config
@@ -87,10 +87,13 @@ echo -n "Creating .config directory... "
 mkdir -p $HOME_CONFIG
 echo 'done!'
 
-echo "Cloning LazyVim... "
-git clone https://github.com/LazyVim/starter $HOME_CONFIG/nvim
+echo "Setting up AstroNvim..."
+rm -fr $HOME_CONFIG/nvim
+git clone --depth 1 https://github.com/AstroNvim/template $HOME_CONFIG/nvim
 rm -fr $HOME_CONFIG/nvim/.git
 echo 'done!'
+ln -sf $MEOWRC_HOME/nvim/polish.lua $HOME_CONFIG/nvim/lua/
+ln -sf $MEOWRC_HOME/nvim/community.lua $HOME_CONFIG/nvim/lua/
 echo
 
 vim +'BundleInstall!' +qa
