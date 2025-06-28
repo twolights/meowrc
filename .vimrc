@@ -198,7 +198,6 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'fsouza/go.vim'
 Bundle 'scrooloose/nerdtree'
@@ -215,7 +214,6 @@ Bundle 'nginx.vim'
 Bundle 'JSON.vim'
 Bundle 'python.vim'
 Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
 
 " Clears SignColumn for vim-gitgutter
 highlight clear SignColumn
