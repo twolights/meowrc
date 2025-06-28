@@ -64,11 +64,11 @@ elif [ -x $batcat_check ]; then
 fi
 
 if [ -x $advcp_check ]; then
-    alias cp=advcp
+    alias cp='advcp -g'
 fi
 
 if [ -x $advmv_check ]; then
-    alias mv=advmv
+    alias mv='advmv -g'
 else 
     alias mv='mv -i'
 fi
