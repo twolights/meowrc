@@ -54,11 +54,23 @@ unset ptipython_check
 
 bat_check=`which bat`
 batcat_check=`which batcat`
+advcp_check=`which advcp`
+advmv_check=`which advmv`
 
 if [ -x $batcat_check ]; then
     alias cat=batcat
 elif [ -x $batcat_check ]; then
     alias cat=bat
+fi
+
+if [ -x $advcp_check ]; then
+    alias cp=advcp
+fi
+
+if [ -x $advmv_check ]; then
+    alias mv=advmv
+else 
+    alias mv='mv -i'
 fi
 
 unset bat_check
@@ -73,7 +85,6 @@ alias keeptell='run-and-notify.sh 1'
 alias m='meteor'
 alias mk='minikube'
 alias mssh='mosh --ssh=ssh'
-alias mv='mv -i'
 alias n=nslookup
 alias p="ps -axwww"
 alias psm="psu $USER"
