@@ -56,6 +56,7 @@ bat_check=`which bat`
 batcat_check=`which batcat`
 advcp_check=`which advcp`
 advmv_check=`which advmv`
+dysk_check=`which dysk`
 
 if [ -x $batcat_check ]; then
     alias cat=batcat
@@ -71,6 +72,12 @@ if [ -x $advmv_check ]; then
     alias mv='advmv -g'
 else 
     alias mv='mv -i'
+fi
+
+if [ -x $dysk_check ]; then
+    alias df='dysk'
+else
+    alias df='df -h'
 fi
 
 unset bat_check
