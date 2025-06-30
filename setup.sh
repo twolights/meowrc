@@ -92,6 +92,7 @@ rm -fr $HOME_CONFIG/nvim
 git clone --depth 1 https://github.com/AstroNvim/template $HOME_CONFIG/nvim
 rm -fr $HOME_CONFIG/nvim/.git
 echo 'done!'
+ln -sf $MEOWRC_HOME/nvim/theme.lua $HOME_CONFIG/nvim/lua/plugins/
 ln -sf $MEOWRC_HOME/nvim/polish.lua $HOME_CONFIG/nvim/lua/
 ln -sf $MEOWRC_HOME/nvim/community.lua $HOME_CONFIG/nvim/lua/
 echo
