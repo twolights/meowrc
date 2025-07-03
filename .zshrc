@@ -152,5 +152,19 @@ else
     alias ls='ls -aGF'
 fi  
 
-eval "$(uv generate-shell-completion zsh)"
-eval "$(uvx --generate-shell-completion zsh)"
+uv_check=`which uv`
+ufx_check=`which uvx`
+ruff_check=`which ruff`
+
+if [ -x $uv_check ]; then
+    eval "$(uv generate-shell-completion zsh)"
+fi
+
+if [ -x $uvx_check ]; then
+    eval "$(uvx --generate-shell-completion zsh)"
+fi
+
+if [ -x $ruff_check ]; then
+    eval "$(ruff generate-shell-completion zsh)"
+fi
+
