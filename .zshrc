@@ -52,37 +52,6 @@ fi
 
 unset ptipython_check
 
-bat_check=`which bat`
-batcat_check=`which batcat`
-advcp_check=`which advcp`
-advmv_check=`which advmv`
-dysk_check=`which dysk`
-
-if [ -x $batcat_check ]; then
-    alias cat=batcat
-elif [ -x $batcat_check ]; then
-    alias cat=bat
-fi
-
-if [ -x $advcp_check ]; then
-    alias cp='advcp -g'
-fi
-
-if [ -x $advmv_check ]; then
-    alias mv='advmv -g'
-else 
-    alias mv='mv -i'
-fi
-
-if [ -x $dysk_check ]; then
-    alias df='dysk'
-else
-    alias df='df -h'
-fi
-
-unset bat_check
-unset batcat_check
-
 alias ans=ansible
 alias g=egrep
 alias h='history'
@@ -152,9 +121,15 @@ else
     alias ls='ls -aGF'
 fi  
 
-uv_check=`which uv`
-ufx_check=`which uvx`
+advcp_check=`which advcp`
+advmv_check=`which advmv`
+bat_check=`which bat`
+batcat_check=`which batcat`
+dysk_check=`which dysk`
 ruff_check=`which ruff`
+ufx_check=`which uvx`
+uv_check=`which uv`
+
 
 if [ -x $uv_check ]; then
     eval "$(uv generate-shell-completion zsh)"
@@ -168,3 +143,33 @@ if [ -x $ruff_check ]; then
     eval "$(ruff generate-shell-completion zsh)"
 fi
 
+if [ -x $batcat_check ]; then
+    alias cat=batcat
+elif [ -x $batcat_check ]; then
+    alias cat=bat
+fi
+
+if [ -x $advcp_check ]; then
+    alias cp='advcp -g'
+fi
+
+if [ -x $advmv_check ]; then
+    alias mv='advmv -g'
+else 
+    alias mv='mv -i'
+fi
+
+if [ -x $dysk_check ]; then
+    alias df='dysk'
+else
+    alias df='df -h'
+fi
+
+unset advcp_check
+unset advmv_check
+unset bat_check
+unset batcat_check
+unset dysk_check
+unset ruff_check
+unset ufx_check
+unset uv_check
