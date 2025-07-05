@@ -96,6 +96,7 @@ ln -sf $MEOWRC_HOME/nvim/theme.lua $HOME_CONFIG/nvim/lua/plugins/
 ln -sf $MEOWRC_HOME/nvim/copilot-chat.lua $HOME_CONFIG/nvim/lua/plugins/
 ln -sf $MEOWRC_HOME/nvim/polish.lua $HOME_CONFIG/nvim/lua/
 ln -sf $MEOWRC_HOME/nvim/community.lua $HOME_CONFIG/nvim/lua/
+ln -sf $MEOWRC_HOME/nvim/astrolsp.lua $HOME_CONFIG/nvim/lua/plugins/
 echo
 
 vim +'BundleInstall!' +qa
