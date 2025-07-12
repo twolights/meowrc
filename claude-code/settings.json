@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/bin/slack-notify-channel.sh ai-coders \"Claude requires your attention in $(basename \"$PWD\")\""
+          }
+        ]
+      }
+    ]
+  }
+}

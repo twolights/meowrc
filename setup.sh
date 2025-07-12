@@ -14,6 +14,7 @@ VUNDLE_HOME=$VIM_BUNDLE/vundle
 MEOWRC_HOME=~/.meowrc
 MEOWRC_BIN=$MEOWRC_HOME/bin
 MEOWRC_VIM=$MEOWRC_HOME/vim
+CLAUDE_CONFIG_DIR=~/.claude/
 
 SECRETS_HOME=~/.secrets
 
@@ -85,6 +86,11 @@ echo 'done!'
 
 echo -n "Creating .config directory... "
 mkdir -p $HOME_CONFIG
+echo 'done!'
+
+echo -n "Importing Claude Code settings... "
+mkdir -p $CLAUDE_CONFIG_DIR
+ln -sf $MEOWRC_HOME/claude/settings.json $CLAUDE_CONFIG_DIR
 echo 'done!'
 
 echo "Setting up AstroNvim..."
