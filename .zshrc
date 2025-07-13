@@ -146,7 +146,7 @@ fi
 
 if [ -x $batcat_check ]; then
     alias cat=batcat
-elif [ -x $batcat_check ]; then
+elif [ -x $bat_check ]; then
     alias cat=bat
 fi
 
