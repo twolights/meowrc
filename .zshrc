@@ -34,15 +34,6 @@ plugins=(git macos pip git-flow vi-mode zsh-syntax-highlighting docker docker-co
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-if [ -f ~/.aliases ]; then
-    source ~/.aliases
-fi
-
-if [ -f ~/.local_zshrc ]; then
-    source ~/.local_zshrc
-fi
-
 ptipython_check=`which ptipython`
 if [ -x $ptipython_check ]; then
     alias ipy='ptipython --vi'
@@ -178,3 +169,12 @@ unset dysk_check
 unset ruff_check
 unset uvx_check
 unset uv_check
+
+# Customize to your needs...
+if [ -f ~/.aliases ]; then
+    source ~/.aliases
+fi
+
+if [ -f ~/.local_zshrc ]; then
+    source ~/.local_zshrc
+fi
