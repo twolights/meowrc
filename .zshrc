@@ -107,10 +107,11 @@ elif [ $current_os = 'Darwin' ]; then
     alias locate=mdfind
     eval "$(brew shellenv)"
     autoload -Uz compinit
-    compinit
 else
     alias ls='ls -aGF'
 fi  
+
+compinit
 
 advcp_check=`which advcp`
 advmv_check=`which advmv`
@@ -121,6 +122,7 @@ gh_check=`which gh`
 ruff_check=`which ruff`
 uvx_check=`which uvx`
 uv_check=`which uv`
+zoxide_check=`which zoxide`
 
 
 if [ -x $uv_check ]; then
@@ -161,6 +163,10 @@ if [ -x $gh_check ]; then
     eval "$(gh completion -s zsh)"
 fi
 
+if [ -x $zoxide_check ]; then
+    eval "$(zoxide init zsh)"
+fi
+
 unset advcp_check
 unset advmv_check
 unset bat_check
@@ -169,6 +175,7 @@ unset dysk_check
 unset ruff_check
 unset uvx_check
 unset uv_check
+unset zoxide_check
 
 # Customize to your needs...
 if [ -f ~/.aliases ]; then
