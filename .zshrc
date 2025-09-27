@@ -118,6 +118,7 @@ advmv_check=`which advmv`
 bat_check=`which bat`
 batcat_check=`which batcat`
 dysk_check=`which dysk`
+fdfind_check=`which fdfind`
 gh_check=`which gh`
 ruff_check=`which ruff`
 uvx_check=`which uvx`
@@ -159,6 +160,10 @@ else
     alias df='df -h'
 fi
 
+if [ -x $fdfind_check ]; then
+    alias fd=fdfind
+fi
+
 if [ -x $gh_check ]; then
     eval "$(gh completion -s zsh)"
 fi
@@ -172,6 +177,7 @@ unset advmv_check
 unset bat_check
 unset batcat_check
 unset dysk_check
+unset fdfind_check
 unset ruff_check
 unset uvx_check
 unset uv_check
