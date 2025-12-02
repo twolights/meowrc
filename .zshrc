@@ -170,6 +170,7 @@ fi
 
 if [ -x $zoxide_check ]; then
     eval "$(zoxide init zsh)"
+    alias j=z
 fi
 
 unset advcp_check
