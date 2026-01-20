@@ -15,6 +15,7 @@ MEOWRC_HOME=~/.meowrc
 MEOWRC_BIN=$MEOWRC_HOME/bin
 MEOWRC_VIM=$MEOWRC_HOME/vim
 CLAUDE_CONFIG_DIR=~/.claude/
+CLAUDE_COMMANDS_DIR=$CLAUDE_CONFIG_DIR/commands/
 
 SECRETS_HOME=~/.secrets
 
@@ -91,6 +92,11 @@ echo 'done!'
 echo -n "Importing Claude Code settings... "
 mkdir -p $CLAUDE_CONFIG_DIR
 ln -sf $MEOWRC_HOME/claude-code/settings.json $CLAUDE_CONFIG_DIR
+echo 'done!'
+
+echo -n "Fetching Claude Code commands... "
+mkdir -p $CLAUDE_COMMANDS_DIR
+curl https://raw.githubusercontent.com/evmts/tevm-monorepo/refs/heads/main/.claude/commands/commit.md > $CLAUDE_COMMANDS_DIR/commit.md
 echo 'done!'
 
 echo "Setting up AstroNvim..."
