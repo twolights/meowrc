@@ -92,6 +92,7 @@ echo 'done!'
 echo -n "Importing Claude Code settings... "
 mkdir -p $CLAUDE_CONFIG_DIR
 ln -sf $MEOWRC_HOME/claude-code/settings.json $CLAUDE_CONFIG_DIR
+ln -sf $MEOWRC_HOME/claude-code/CLAUDE.md $CLAUDE_CONFIG_DIR
 echo 'done!'
 
 echo -n "Fetching Claude Code commands... "
