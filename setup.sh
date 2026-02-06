@@ -100,6 +100,9 @@ mkdir -p $CLAUDE_COMMANDS_DIR
 curl https://raw.githubusercontent.com/evmts/tevm-monorepo/refs/heads/main/.claude/commands/commit.md > $CLAUDE_COMMANDS_DIR/commit.md
 echo 'done!'
 
+echo "Installing Claude Code plugins..."
+$MEOWRC_HOME/claude-code/install-plugins.sh
+
 echo "Setting up AstroNvim..."
 rm -fr $HOME_CONFIG/nvim
 git clone --depth 1 https://github.com/AstroNvim/template $HOME_CONFIG/nvim
