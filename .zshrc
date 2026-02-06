@@ -192,3 +192,12 @@ fi
 if [ -f ~/.local_zshrc ]; then
     source ~/.local_zshrc
 fi
+
+# bun completions
+[ -s "/Users/ykchen/.bun/_bun" ] && source "/Users/ykchen/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+alias claude-mem='/Users/ykchen/.bun/bin/bun "/Users/ykchen/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs"'
