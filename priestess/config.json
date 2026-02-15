@@ -1,0 +1,211 @@
+{
+  "activationKey" : "command",
+  "activationTimeout" : 2,
+  "autoStart" : true,
+  "doublePressInterval" : 0.3,
+  "feedbackEnabled" : true,
+  "shortcuts" : [
+    {
+      "action" : {
+        "bundleId" : "com.apple.ActivityMonitor",
+        "type" : "switchApplication"
+      },
+      "enabled" : true,
+      "id" : "3C562970-BD98-464A-B420-4890A7213936",
+      "key" : "a",
+      "label" : "Activity Monitor"
+    },
+    {
+      "action" : {
+        "bundleId" : "com.tinyspeck.slackmacgap",
+        "type" : "switchApplication"
+      },
+      "enabled" : true,
+      "id" : "F4ECF328-6927-47BD-90E2-EDB5910655B1",
+      "key" : "s",
+      "label" : "Slack"
+    },
+    {
+      "action" : {
+        "bundleId" : "com.apple.Safari",
+        "type" : "switchApplication"
+      },
+      "enabled" : true,
+      "id" : "FF7362F3-F0E2-40E6-832C-8B3F2DE50BCC",
+      "key" : "f",
+      "label" : "Safari"
+    },
+    {
+      "action" : {
+        "bundleId" : "com.anthropic.claudefordesktop",
+        "type" : "switchApplication"
+      },
+      "enabled" : true,
+      "id" : "47D5F522-7524-45CB-BB8E-E22B2293AD4A",
+      "key" : "g",
+      "label" : "Claude"
+    },
+    {
+      "action" : {
+        "bundleId" : "com.google.android.studio",
+        "type" : "switchApplication"
+      },
+      "enabled" : true,
+      "id" : "A0DAC44A-490F-46B6-BB68-94D9CCC3F2FD",
+      "key" : "z",
+      "label" : "Android Studio"
+    },
+    {
+      "action" : {
+        "bundleId" : "com.google.Chrome",
+        "type" : "switchApplication"
+      },
+      "enabled" : true,
+      "id" : "F0DCEB79-8ECE-4D11-99EF-2BBB90F1E925",
+      "key" : "c",
+      "label" : "Google Chrome"
+    },
+    {
+      "action" : {
+        "bundleId" : "com.microsoft.VSCode",
+        "type" : "switchApplication"
+      },
+      "enabled" : true,
+      "id" : "56F66298-9171-4B37-B683-6CCE8FBFD624",
+      "key" : "v",
+      "label" : "VS Code"
+    },
+    {
+      "action" : {
+        "bundleId" : "com.apple.calculator",
+        "type" : "switchApplication"
+      },
+      "enabled" : true,
+      "id" : "4F751DB9-4B7A-4ADE-A64C-4F96BB1EB383",
+      "key" : "b",
+      "label" : "Calculator"
+    },
+    {
+      "action" : {
+        "bundleId" : "com.sequel-ace.sequel-ace",
+        "type" : "switchApplication"
+      },
+      "enabled" : true,
+      "id" : "A9FC05A2-30E6-4A52-9CEF-1719730B3811",
+      "key" : "q",
+      "label" : "Sequel Ace"
+    },
+    {
+      "action" : {
+        "bundleId" : "com.jetbrains.pycharm",
+        "type" : "switchApplication"
+      },
+      "enabled" : true,
+      "id" : "543D83C8-D8B8-4763-9655-6B339473E7B8",
+      "key" : "w",
+      "label" : "PyCharm"
+    },
+    {
+      "action" : {
+        "bundleId" : "com.jetbrains.PhpStorm",
+        "type" : "switchApplication"
+      },
+      "enabled" : true,
+      "id" : "A4B83DEA-9FF5-4620-810B-6FA60B5E439D",
+      "key" : "e",
+      "label" : "PhpStorm"
+    },
+    {
+      "action" : {
+        "bundleId" : "com.postmanlabs.mac",
+        "type" : "switchApplication"
+      },
+      "enabled" : true,
+      "id" : "1334D9DA-0EFF-485E-8FBA-A29E44F59D98",
+      "key" : "r",
+      "label" : "Postman"
+    },
+    {
+      "action" : {
+        "bundleId" : "com.googlecode.iterm2",
+        "type" : "switchApplication"
+      },
+      "enabled" : true,
+      "id" : "4D5AAB24-64FD-43BC-8EDF-40C5A231AB53",
+      "key" : "t",
+      "label" : "iTerm"
+    },
+    {
+      "action" : {
+        "bundleId" : "com.spotify.client",
+        "type" : "switchApplication"
+      },
+      "enabled" : true,
+      "id" : "79485DFD-D3FC-44D5-8998-6134F72F3CB3",
+      "key" : "o",
+      "label" : "Spotify"
+    },
+    {
+      "action" : {
+        "bundleId" : "com.apple.Music",
+        "type" : "switchApplication"
+      },
+      "enabled" : true,
+      "id" : "7E4C7612-FE0A-47E3-8975-CDA33B56E1A9",
+      "key" : "i",
+      "label" : "Music"
+    },
+    {
+      "action" : {
+        "bundleId" : "com.apple.Preview",
+        "type" : "switchApplication"
+      },
+      "enabled" : true,
+      "id" : "7C716C59-AEF8-489C-879C-3BA5FCB8AA98",
+      "key" : "p",
+      "label" : "Preview"
+    },
+    {
+      "action" : {
+        "bundleId" : "jp.naver.line.mac",
+        "type" : "switchApplication"
+      },
+      "enabled" : true,
+      "id" : "8750B401-6053-4B02-A787-A543FFF60540",
+      "key" : "l",
+      "label" : "LINE"
+    },
+    {
+      "action" : {
+        "bundleId" : "com.apple.iWork.Keynote",
+        "type" : "switchApplication"
+      },
+      "enabled" : true,
+      "id" : "5EE123A5-2019-45B1-BE62-29D523C98F95",
+      "key" : "k",
+      "label" : "Keynote"
+    },
+    {
+      "action" : {
+        "bundleId" : "notion.id",
+        "type" : "switchApplication"
+      },
+      "enabled" : true,
+      "id" : "969FD710-A827-4FE6-AC79-08464AD7632C",
+      "key" : "n",
+      "label" : "Notion"
+    },
+    {
+      "action" : {
+        "bundleId" : "com.apple.MobileSMS",
+        "type" : "switchApplication"
+      },
+      "enabled" : true,
+      "id" : "FD8397B7-0A2E-4C9B-88F3-3279B83B0090",
+      "key" : "m",
+      "label" : "Messages"
+    }
+  ],
+  "showMenuBarIcon" : true,
+  "version" : 1
+}
