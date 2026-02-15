@@ -1,27 +1,47 @@
 #!/bin/bash
 
 # Claude Code Plugin Installer
-# This script installs all plugins defined in the meowrc configuration
+# This script installs all plugins by directly updating settings.json
+# (The `claude plugins install` CLI command is broken/hangs in some versions)
 
 set -e
 
-if ! command -v claude &>/dev/null; then
-    echo "Claude Code is not installed. Skipping plugin installation."
-    exit 0
+SETTINGS_FILE="$HOME/.claude/settings.json"
+
+if [ ! -f "$SETTINGS_FILE" ]; then
+    echo "Creating Claude Code settings file..."
+    mkdir -p "$(dirname "$SETTINGS_FILE")"
+    echo '{}' > "$SETTINGS_FILE"
 fi
 
 echo "Installing Claude Code plugins..."
 
-# Official plugins
-claude plugins install pyright-lsp@claude-plugins-official 2>/dev/null || true
-claude plugins install rust-analyzer-lsp@claude-plugins-official 2>/dev/null || true
-claude plugins install swift-lsp@claude-plugins-official 2>/dev/null || true
-claude plugins install php-lsp@claude-plugins-official 2>/dev/null || true
-claude plugins install frontend-design@claude-plugins-official 2>/dev/null || true
-claude plugins install context7@claude-plugins-official 2>/dev/null || true
+# Define plugins to install
+PLUGINS=(
+    # Official plugins
+    "pyright-lsp@claude-plugins-official"
+    "rust-analyzer-lsp@claude-plugins-official"
+    "swift-lsp@claude-plugins-official"
+    "php-lsp@claude-plugins-official"
+    "frontend-design@claude-plugins-official"
+    "context7@claude-plugins-official"
+    # Third-party plugins
+    "scientific-skills@claude-scientific-skills"
+    "claude-mem@thedotmack"
+)
 
-# Third-party plugins
-claude plugins install scientific-skills@claude-scientific-skills 2>/dev/null || true
-claude plugins install claude-mem@thedotmack 2>/dev/null || true
+# Build jq filter to add all plugins
+JQ_FILTER='.enabledPlugins //= {}'
+for plugin in "${PLUGINS[@]}"; do
+    JQ_FILTER="$JQ_FILTER | .enabledPlugins[\"$plugin\"] = true"
+done
 
-echo "Claude Code plugins installed successfully!"
+# Update settings.json
+if command -v jq &>/dev/null; then
+    jq "$JQ_FILTER" "$SETTINGS_FILE" > "$SETTINGS_FILE.tmp" && mv "$SETTINGS_FILE.tmp" "$SETTINGS_FILE"
+    echo "Claude Code plugins installed successfully!"
+else
+    echo "Error: jq is required but not installed."
+    echo "Install with: brew install jq"
+    exit 1
+fi
