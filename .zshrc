@@ -90,14 +90,6 @@ man () {
     /usr/bin/man $@ | col -b | vim -R -c 'set ft=man nomod nolist' -
 }
 
-if [ -d "env" ]; then
-    echo "Python virtual environment detected in current path [$PWD/env], activating it"
-    . env/bin/activate
-elif [ -d ".venv" ]; then
-    echo "Python virtual environment detected in current path [$PWD/.venv], activating it"
-    . .venv/bin/activate
-fi
-
 current_os=`uname -s`
 if [ $current_os = 'Linux' ]; then
     alias ls='ls -aF --color' 
