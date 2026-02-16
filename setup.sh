@@ -103,6 +103,7 @@ echo 'done!'
 echo -n "Fetching Claude Code commands... "
 mkdir -p $CLAUDE_COMMANDS_DIR
 curl https://raw.githubusercontent.com/evmts/tevm-monorepo/refs/heads/main/.claude/commands/commit.md > $CLAUDE_COMMANDS_DIR/commit.md
+ln -sf $MEOWRC_HOME/claude-code/commands/* $CLAUDE_COMMANDS_DIR/
 echo 'done!'
 
 echo "Installing Claude Code plugins..."
