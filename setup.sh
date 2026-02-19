@@ -90,9 +90,11 @@ echo -n "Creating .config directory... "
 mkdir -p $HOME_CONFIG
 echo 'done!'
 
-echo -n "Importing Summoner settings... "
-ln -sf $MEOWRC_HOME/summoner $HOME_CONFIG
-echo 'done!'
+if [ "$OS" = "Darwin" ]; then
+    echo -n "Importing Summoner settings... "
+    ln -sf $MEOWRC_HOME/summoner $HOME_CONFIG
+    echo 'done!'
+fi
 
 echo -n "Importing Claude Code settings... "
 mkdir -p $CLAUDE_CONFIG_DIR
