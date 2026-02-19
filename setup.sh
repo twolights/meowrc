@@ -16,7 +16,7 @@ MEOWRC_BIN=$MEOWRC_HOME/bin
 MEOWRC_VIM=$MEOWRC_HOME/vim
 CLAUDE_CONFIG_DIR=~/.claude/
 CLAUDE_COMMANDS_DIR=$CLAUDE_CONFIG_DIR/commands/
-PRIESTESS_CONFIG_DIR=$HOME_CONFIG/priestess
+SUMMONER_CONFIG_DIR=$HOME_CONFIG/summoner
 
 SECRETS_HOME=~/.secrets
 
@@ -90,8 +90,8 @@ echo -n "Creating .config directory... "
 mkdir -p $HOME_CONFIG
 echo 'done!'
 
-echo -n "Importing Priestess settings... "
-ln -sf $MEOWRC_HOME/priestess $PRIESTESS_CONFIG_DIR
+echo -n "Importing Summoner settings... "
+ln -sf $MEOWRC_HOME/summoner $HOME_CONFIG
 echo 'done!'
 
 echo -n "Importing Claude Code settings... "

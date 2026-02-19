@@ -2,8 +2,15 @@
   "activationKey" : "command",
   "activationTimeout" : 2,
   "autoStart" : true,
+  "cliSymlinkEnabled" : true,
+  "cliSymlinkPath" : "~\/.local\/bin",
   "doublePressInterval" : 0.3,
-  "feedbackEnabled" : true,
+  "feedbackSettings" : {
+    "activationAudio" : true,
+    "activationVisual" : true,
+    "executionAudio" : true,
+    "executionVisual" : true
+  },
   "shortcuts" : [
     {
       "action" : {
@@ -107,16 +114,6 @@
     },
     {
       "action" : {
-        "bundleId" : "com.jetbrains.PhpStorm",
-        "type" : "switchApplication"
-      },
-      "enabled" : true,
-      "id" : "A4B83DEA-9FF5-4620-810B-6FA60B5E439D",
-      "key" : "e",
-      "label" : "PhpStorm"
-    },
-    {
-      "action" : {
         "bundleId" : "com.postmanlabs.mac",
         "type" : "switchApplication"
       },
@@ -207,5 +204,5 @@
     }
   ],
   "showMenuBarIcon" : true,
-  "version" : 1
+  "version" : 3
 }
