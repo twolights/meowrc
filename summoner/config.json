@@ -1,15 +1,28 @@
 {
   "activationKey" : "command",
-  "activationTimeout" : 2,
+  "activationTimeout" : 5,
   "autoStart" : true,
   "cliSymlinkEnabled" : true,
   "cliSymlinkPath" : "~\/.local\/bin",
+  "dockSwitcher" : {
+    "enabled" : true,
+    "keyMappings" : [
+
+    ]
+  },
   "doublePressInterval" : 0.3,
   "feedbackSettings" : {
     "activationAudio" : true,
     "activationVisual" : true,
     "executionAudio" : true,
     "executionVisual" : true
+  },
+  "overlayAppearance" : {
+    "gridLayoutMode" : "manual",
+    "manualColumns" : 5,
+    "manualRows" : 4,
+    "position" : "bottom",
+    "sizePreset" : "medium"
   },
   "shortcuts" : [
     {
@@ -77,7 +90,7 @@
         "bundleId" : "com.microsoft.VSCode",
         "type" : "switchApplication"
       },
-      "enabled" : true,
+      "enabled" : false,
       "id" : "56F66298-9171-4B37-B683-6CCE8FBFD624",
       "key" : "v",
       "label" : "VS Code"
@@ -97,7 +110,7 @@
         "bundleId" : "com.sequel-ace.sequel-ace",
         "type" : "switchApplication"
       },
-      "enabled" : true,
+      "enabled" : false,
       "id" : "A9FC05A2-30E6-4A52-9CEF-1719730B3811",
       "key" : "q",
       "label" : "Sequel Ace"
@@ -117,7 +130,7 @@
         "bundleId" : "com.postmanlabs.mac",
         "type" : "switchApplication"
       },
-      "enabled" : true,
+      "enabled" : false,
       "id" : "1334D9DA-0EFF-485E-8FBA-A29E44F59D98",
       "key" : "r",
       "label" : "Postman"
@@ -147,7 +160,7 @@
         "bundleId" : "com.apple.Music",
         "type" : "switchApplication"
       },
-      "enabled" : true,
+      "enabled" : false,
       "id" : "7E4C7612-FE0A-47E3-8975-CDA33B56E1A9",
       "key" : "i",
       "label" : "Music"
@@ -197,12 +210,23 @@
         "bundleId" : "com.apple.MobileSMS",
         "type" : "switchApplication"
       },
-      "enabled" : true,
+      "enabled" : false,
       "id" : "FD8397B7-0A2E-4C9B-88F3-3279B83B0090",
       "key" : "m",
       "label" : "Messages"
+    },
+    {
+      "action" : {
+        "bundleId" : "com.apple.dt.Xcode",
+        "type" : "switchApplication"
+      },
+      "enabled" : false,
+      "id" : "A4C715BC-E9C4-4380-954B-24736D6B4197",
+      "key" : "x",
+      "label" : "Xcode"
     }
   ],
   "showMenuBarIcon" : true,
-  "version" : 3
+  "showOnDock" : false,
+  "version" : 6
 }
