@@ -110,7 +110,7 @@
         "bundleId" : "com.sequel-ace.sequel-ace",
         "type" : "switchApplication"
       },
-      "enabled" : false,
+      "enabled" : true,
       "id" : "A9FC05A2-30E6-4A52-9CEF-1719730B3811",
       "key" : "q",
       "label" : "Sequel Ace"
@@ -160,7 +160,7 @@
         "bundleId" : "com.apple.Music",
         "type" : "switchApplication"
       },
-      "enabled" : false,
+      "enabled" : true,
       "id" : "7E4C7612-FE0A-47E3-8975-CDA33B56E1A9",
       "key" : "i",
       "label" : "Music"
@@ -210,7 +210,7 @@
         "bundleId" : "com.apple.MobileSMS",
         "type" : "switchApplication"
       },
-      "enabled" : false,
+      "enabled" : true,
       "id" : "FD8397B7-0A2E-4C9B-88F3-3279B83B0090",
       "key" : "m",
       "label" : "Messages"
