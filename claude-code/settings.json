@@ -1,5 +1,18 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(.specify/scripts/bash/check-prerequisites.sh:*)",
+      "Bash(.specify/scripts/bash/setup-plan.sh:*)",
+      "Bash(.specify/scripts/bash/update-agent-context.sh:*)",
+      "Bash(swift build:*)",
+      "Bash(swift test:*)",
+      "Bash(swift package clean:*)"
+    ]
+  },
   "hooks": {
     "Notification": [
       {
@@ -8,13 +21,14 @@
           {
             "type": "command",
             "command": "~/bin/slack-notify-channel.sh ai-coders \"Claude Code requires your action in project [$(basename \"$PWD\")]\""
+          },
+          {
+            "type": "command",
+            "command": "printf '\\a'"
           }
         ]
       }
     ]
-  },
-  "env": {
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   },
   "statusLine": {
     "type": "command",
@@ -28,19 +42,21 @@
     "frontend-design@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
     "scientific-skills@claude-scientific-skills": true,
-    "claude-mem@thedotmack": true
+    "superpowers@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "github@claude-plugins-official": false,
+    "playwright@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "cardmagic": {
+      "source": {
+        "source": "github",
+        "repo": "cardmagic/ai-marketplace"
+      }
+    }
   },
   "alwaysThinkingEnabled": true,
-  "permissions": {
-    "allow": [
-      "Bash(.specify/scripts/bash/check-prerequisites.sh:*)",
-      "Bash(.specify/scripts/bash/setup-plan.sh:*)",
-      "Bash(.specify/scripts/bash/update-agent-context.sh:*)",
-      "Bash(swift build:*)",
-      "Bash(swift test:*)",
-      "Bash(swift package clean:*)"
-    ]
-  },
   "teammateMode": "in-process",
   "feedbackSurveyState": {
     "lastShownTime": 1754019442711
