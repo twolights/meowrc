@@ -52,7 +52,8 @@
     "code-review@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
     "github@claude-plugins-official": false,
-    "playwright@claude-plugins-official": false
+    "playwright@claude-plugins-official": false,
+    "reminders@cardmagic": true
   },
   "extraKnownMarketplaces": {
     "cardmagic": {
