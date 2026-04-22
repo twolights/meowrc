@@ -8,6 +8,7 @@ HOME_VIM=~/.vim
 OH_MY_ZSH=~/.oh-my-zsh
 OH_MY_ZSH_PLUGIN=$OH_MY_ZSH/custom/plugins
 ZSH_SYNTAX_HIGHLIGHT_PLUGIN=$OH_MY_ZSH_PLUGIN/zsh-syntax-highlighting
+ZSH_CLAUDE_CODE_SHELL_PLUGIN=$OH_MY_ZSH_PLUGIN/zsh-claude-code-shell
 AUTO_REPORT_LONGTASKS_PLUGIN=$OH_MY_ZSH_PLUGIN/auto-report-longtasks
 VIM_BUNDLE=$HOME_VIM/bundle
 VUNDLE_HOME=$VIM_BUNDLE/vundle
@@ -43,6 +44,15 @@ else
     echo 'Updating zsh-syntax-highlighting...'
     pushd $ZSH_SYNTAX_HIGHLIGHT_PLUGIN
     git pull origin master
+    popd
+fi
+if [ ! -d $ZSH_CLAUDE_CODE_SHELL_PLUGIN ]; then
+    echo 'Installing zsh-claude-code-shell...'
+    git clone https://github.com/ArielTM/zsh-claude-code-shell.git $ZSH_CLAUDE_CODE_SHELL_PLUGIN
+else
+    echo 'Updating zsh-claude-code-shell...'
+    pushd $ZSH_CLAUDE_CODE_SHELL_PLUGIN
+    git pull origin main
     popd
 fi
 popd
