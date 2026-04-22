@@ -29,7 +29,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/ykchen/.local/bin/tms-notify-hook",
+            "command": "~/.local/bin/tms-notify-hook",
             "timeout": 10
           }
         ]
