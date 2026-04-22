@@ -21,10 +21,16 @@
           {
             "type": "command",
             "command": "~/bin/slack-notify-channel.sh ai-coders \"Claude Code requires your action in project [$(basename \"$PWD\")]\""
-          },
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
           {
             "type": "command",
-            "command": "printf '\\a'"
+            "command": "/Users/ykchen/.local/bin/tms-notify-hook",
+            "timeout": 10
           }
         ]
       }
