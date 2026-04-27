@@ -67,5 +67,7 @@
   "teammateMode": "in-process",
   "feedbackSurveyState": {
     "lastShownTime": 1754019442711
-  }
+  },
+  "editorMode": "vim",
+  "agentPushNotifEnabled": true
 }
