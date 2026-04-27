@@ -14,4 +14,17 @@ Concrete examples:
 
 **How to apply:** When designing or reviewing product surfaces (new endpoints, CLI tools, admin features), ask "could an AI agent drive this effectively?" Prefer structured/declarative interfaces over GUI-only flows. Ensure documentation is machine-readable (OpenAPI, typed schemas, examples).
 
+# Miscellaneous AI-assisted work
+
+Default working directory: `~/test/misc`. Use it for one-off scripts,
+experiments, and any task without an explicit project directory. Create the
+directory if it doesn't exist.
+
+- **Python**: use `uv` to initialize/manage a virtualenv inside the working
+  directory (e.g. `uv venv`, `uv add <pkg>`, `uv run <cmd>`). Do not install
+  Python packages globally.
+- **Node**: install modules locally inside the working directory
+  (`npm init -y` then `npm install <pkg>`, or `pnpm add <pkg>`). Do not install
+  globally.
+
 @RTK.md
