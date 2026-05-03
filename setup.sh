@@ -17,6 +17,7 @@ MEOWRC_BIN=$MEOWRC_HOME/bin
 MEOWRC_VIM=$MEOWRC_HOME/vim
 CLAUDE_CONFIG_DIR=~/.claude/
 CLAUDE_COMMANDS_DIR=$CLAUDE_CONFIG_DIR/commands/
+CLAUDE_SKILLS_DIR=$CLAUDE_CONFIG_DIR/skills/
 SUMMONER_CONFIG_DIR=$HOME_CONFIG/summoner
 
 SECRETS_HOME=~/.secrets
@@ -116,6 +117,11 @@ echo -n "Fetching Claude Code commands... "
 mkdir -p $CLAUDE_COMMANDS_DIR
 curl https://raw.githubusercontent.com/evmts/tevm-monorepo/refs/heads/main/.claude/commands/commit.md > $CLAUDE_COMMANDS_DIR/commit.md
 ln -sf $MEOWRC_HOME/claude-code/commands/* $CLAUDE_COMMANDS_DIR/
+echo 'done!'
+
+echo -n "Linking Claude Code skills... "
+mkdir -p $CLAUDE_SKILLS_DIR
+ln -sf $MEOWRC_HOME/claude-code/skills/design-artifact $CLAUDE_SKILLS_DIR/
 echo 'done!'
 
 echo "Installing Claude Code plugins..."
