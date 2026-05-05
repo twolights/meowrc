@@ -64,10 +64,10 @@
     }
   },
   "alwaysThinkingEnabled": true,
+  "editorMode": "vim",
   "teammateMode": "in-process",
+  "agentPushNotifEnabled": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754019442711
-  },
-  "editorMode": "vim",
-  "agentPushNotifEnabled": true
+  }
 }
