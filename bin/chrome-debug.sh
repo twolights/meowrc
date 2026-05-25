@@ -7,24 +7,27 @@ set -e
 
 PORT=9222
 PROFILE_DIR="$HOME/test/chrome_debug_profile"
+UNSAFE_EXT_DEBUG=0
 
 usage() {
     cat <<EOF
-Usage: $(basename "$0") [-p PORT] [-d PROFILE_DIR] [-- chrome-args...]
+Usage: $(basename "$0") [-p PORT] [-d PROFILE_DIR] [-u] [-- chrome-args...]
 
 Options:
   -p PORT          Remote debugging port (default: 9222)
   -d PROFILE_DIR   User data directory (default: \$HOME/test/chrome_debug_profile)
+  -u               Enable unsafe extension debugging
   -h               Show this help message
 
 Any arguments after -- are passed through to Chrome.
 EOF
 }
 
-while getopts "p:d:h" opt; do
+while getopts "p:d:uh" opt; do
     case "$opt" in
         p) PORT="$OPTARG" ;;
         d) PROFILE_DIR="$OPTARG" ;;
+        u) UNSAFE_EXT_DEBUG=1 ;;
         h) usage; exit 0 ;;
         *) usage; exit 1 ;;
     esac
@@ -54,7 +57,13 @@ fi
 echo "Starting Chrome with remote debugging on port $PORT"
 echo "Profile directory: $PROFILE_DIR"
 
-exec "$CHROME" \
-    --remote-debugging-port="$PORT" \
-    --user-data-dir="$PROFILE_DIR" \
-    "$@"
+CHROME_ARGS=(
+    --remote-debugging-port="$PORT"
+    --user-data-dir="$PROFILE_DIR"
+)
+
+if [ "$UNSAFE_EXT_DEBUG" = 1 ]; then
+    CHROME_ARGS+=(--enable-unsafe-extension-debugging)
+fi
+
+exec "$CHROME" "${CHROME_ARGS[@]}" "$@"
