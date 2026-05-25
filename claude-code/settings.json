@@ -66,6 +66,7 @@
   "alwaysThinkingEnabled": true,
   "editorMode": "vim",
   "teammateMode": "in-process",
+  "skipAutoPermissionPrompt": true,
   "agentPushNotifEnabled": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754019442711
