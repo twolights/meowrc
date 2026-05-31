@@ -20,7 +20,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "~/bin/slack-notify-channel.sh ai-coders \"Claude Code requires your action in project [$(basename \"$PWD\")]\""
+            "command": "~/bin/claude-code-slack-notify-if-away.sh"
           }
         ]
       },
