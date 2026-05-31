@@ -6,3 +6,5 @@
 *.o
 .sconsign.dblite
 a.out
+
+**/.claude/settings.local.json
